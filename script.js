@@ -121,3 +121,46 @@ document.addEventListener('DOMContentLoaded', function() {
     // 스토리 토글 기능 설정
     setupStoryToggle();
 }); 
+
+// 브랜드 히스토리 더보기/닫기 기능
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtn = document.querySelector('.story-toggle-btn');
+    const moreContent = document.querySelector('.story-more-content');
+    
+    if (toggleBtn && moreContent) {
+        toggleBtn.addEventListener('click', function() {
+            if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+                moreContent.style.display = 'block';
+                toggleBtn.textContent = '닫기';
+            } else {
+                moreContent.style.display = 'none';
+                toggleBtn.textContent = '더보기';
+            }
+        });
+    }
+});
+
+// 보호자 후기 더보기/닫기 기능
+document.addEventListener('DOMContentLoaded', function() {
+    // 모든 후기 더보기 버튼을 찾아서 이벤트 리스너 추가
+    const reviewToggleBtns = document.querySelectorAll('.review-toggle-btn');
+    
+    reviewToggleBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            // 버튼의 부모 요소에서 더보기 내용 찾기
+            const reviewContent = btn.closest('.review-content');
+            const moreContent = reviewContent.querySelector('.review-more-content');
+            
+            if (moreContent) {
+                // 현재 상태 확인하고 토글
+                if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+                    moreContent.style.display = 'block'; // 더보기 내용 보이기
+                    btn.textContent = '닫기'; // 버튼 텍스트 변경
+                } else {
+                    moreContent.style.display = 'none'; // 더보기 내용 숨기기
+                    btn.textContent = '더보기'; // 버튼 텍스트 변경
+                }
+            }
+        });
+    });
+}); 

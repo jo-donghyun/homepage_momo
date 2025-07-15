@@ -84,11 +84,39 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover; /* 배경 이미지 꽉 차게 */
-    background-position: center; /* 배경 이미지 가운데 */
-    background-repeat: no-repeat; /* 배경 이미지 반복 안함 */
     opacity: 0; /* 처음에는 안 보이게 */
     transition: opacity 0.5s ease-in-out; /* 부드럽게 나타나고 사라지게 */
+}
+
+/* 배경 이미지 (블러 처리) */
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit; /* 부모와 같은 배경 이미지 */
+    background-size: cover; /* 전체 화면을 채우도록 */
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(15px) brightness(0.7); /* 블러 + 어둡게 */
+    z-index: 0;
+}
+
+/* 메인 이미지 */
+.slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit; /* 부모와 같은 배경 이미지 */
+    background-size: contain; /* 이미지 전체가 보이도록 */
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
 }
 
 /* 현재 활성화된 슬라이드 보이게 */
@@ -103,8 +131,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* 약간의 반투명 검정 */
-    z-index: 1; /* 텍스트 아래에 위치 */
+    background: rgba(0, 0, 0, 0.3); /* 약간의 반투명 검정 (더 연하게) */
+    z-index: 2; /* 텍스트 아래에 위치 */
 }
 
 /* 슬라이드 내용 스타일 */
@@ -115,7 +143,13 @@ body {
     transform: translate(-50%, -50%); /* 정확히 가운데로 */
     text-align: center; /* 글자 가운데 정렬 */
     color: #fff; /* 글자색 흰색 */
-    z-index: 2; /* 위에 보이게 */
+    z-index: 3; /* 위에 보이게 */
+    background: rgba(0, 0, 0, 0.2); /* 반투명 검정 배경 (매우 투명하게) */
+    padding: 2rem 3rem; /* 내부 여백 */
+    border-radius: 20px; /* 둥근 모서리 */
+    backdrop-filter: blur(10px); /* 배경 블러 효과 */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* 그림자 효과 */
+    max-width: 90%; /* 최대 너비 제한 */
 }
 
 /* 브랜드 제목 스타일 */
@@ -123,14 +157,14 @@ body {
     font-size: 3rem; /* 글씨 크게 */
     font-weight: bold;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* 그림자 효과 */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 그림자 효과 (약간 연하게) */
 }
 
 /* 슬라이드 제목 스타일 */
 .slide-content h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* 그림자 효과 */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 그림자 효과 (약간 연하게) */
 }
 
 /* 슬라이드 인용구 스타일 */
@@ -139,14 +173,14 @@ body {
     font-weight: bold;
     font-style: italic; /* 기울임체 */
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* 그림자 효과 */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 그림자 효과 (약간 연하게) */
 }
 
 /* 슬라이드 설명 스타일 */
 .slide-content p {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* 그림자 효과 */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 그림자 효과 (약간 연하게) */
 }
 
 /* 화살표 버튼 스타일 */
@@ -317,6 +351,7 @@ body {
 /* 통계 리스트 스타일 */
 .stats-list {
     display: grid; /* 격자 배치 */
+    grid-template-columns: repeat(2, 1fr); /* 2열 배치 */
     gap: 15px; /* 간격 */
 }
 
@@ -337,6 +372,116 @@ body {
     border-color: #ff6b35; /* 마우스 올렸을 때 주황색 테두리 */
     transform: translateY(-2px); /* 살짝 위로 올라가게 */
     box-shadow: 0 4px 12px rgba(255,107,53,0.2); /* 그림자 효과 */
+}
+
+/* 교육철학 섹션 스타일 */
+.philosophy-section {
+    padding: 80px 0; /* 위아래 여백 */
+    background: #f8f9fa; /* 연한 회색 배경 */
+}
+
+/* 교육철학 컨테이너 스타일 */
+.philosophy-container {
+    max-width: 1200px; /* 최대 너비 */
+    margin: 0 auto; /* 가운데 정렬 */
+    padding: 0 20px; /* 좌우 여백 */
+}
+
+/* 교육철학 제목 스타일 */
+.philosophy-title {
+    font-size: 32px; /* 글씨 크게 */
+    font-weight: bold; /* 굵게 */
+    color: #222;
+    text-align: center; /* 가운데 정렬 */
+    margin-bottom: 20px; /* 아래 여백 */
+}
+
+/* 교육철학 인용구 스타일 */
+.philosophy-quote {
+    font-size: 24px; /* 글씨 크게 */
+    font-weight: bold;
+    color: #ff6b35; /* 주황색 */
+    text-align: center; /* 가운데 정렬 */
+    font-style: italic; /* 기울임체 */
+    margin-bottom: 40px; /* 아래 여백 */
+}
+
+/* 교육철학 콘텐츠 스타일 */
+.philosophy-content {
+    max-width: 800px; /* 최대 너비 */
+    margin: 0 auto 60px auto; /* 가운데 정렬, 아래 여백 */
+    text-align: center; /* 가운데 정렬 */
+}
+
+.philosophy-content p {
+    font-size: 18px; /* 본문 18px */
+    line-height: 1.8; /* 줄 간격 */
+    color: #444;
+    margin-bottom: 20px; /* 문단 간격 */
+}
+
+/* 강조 텍스트 스타일 */
+.highlight-text {
+    font-weight: bold; /* 굵게 */
+    color: #ff6b35; /* 주황색 */
+}
+
+/* 후기 섹션 스타일 */
+.reviews-section {
+    margin-top: 60px; /* 위 여백 */
+}
+
+.reviews-section h3 {
+    font-size: 28px; /* 글씨 크게 */
+    font-weight: bold;
+    color: #222;
+    text-align: center; /* 가운데 정렬 */
+    margin-bottom: 40px; /* 아래 여백 */
+}
+
+/* 후기 그리드 스타일 */
+.reviews-grid {
+    display: grid; /* 격자 배치 */
+    grid-template-columns: repeat(2, 1fr); /* 2열 배치 */
+    gap: 30px; /* 간격 */
+}
+
+/* 후기 아이템 스타일 */
+.review-item {
+    background: #fff; /* 흰색 배경 */
+    padding: 25px; /* 안쪽 여백 */
+    border-radius: 12px; /* 둥근 모서리 */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* 그림자 효과 */
+    text-align: center; /* 가운데 정렬 */
+    transition: all 0.3s ease; /* 부드러운 변화 */
+}
+
+.review-item:hover {
+    transform: translateY(-5px); /* 마우스 올렸을 때 위로 올라가게 */
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15); /* 그림자 효과 강화 */
+}
+
+/* 별점 스타일 */
+.stars {
+    font-size: 20px; /* 글씨 크게 */
+    margin-bottom: 15px; /* 아래 여백 */
+}
+
+/* 후기 텍스트 스타일 */
+.review-text {
+    font-size: 16px; /* 글씨 크기 */
+    line-height: 1.6; /* 줄 간격 */
+    color: #444;
+    margin-bottom: 15px; /* 아래 여백 */
+    text-align: left; /* 좌측 정렬 */
+}
+
+/* 후기 작성자 스타일 */
+.review-author {
+    font-size: 14px; /* 글씨 크기 */
+    font-weight: bold;
+    color: #666;
+    margin: 0; /* 여백 없음 */
 }
 
 /* 모모댕댕 브랜드 히스토리 섹션 스타일 */
@@ -533,6 +678,33 @@ body {
         font-size: 18px; /* 통계 글씨 작게 */
     }
     
+    /* 모바일에서 교육철학 섹션 */
+    .philosophy-section {
+        padding: 40px 0; /* 여백 줄이기 */
+    }
+    .philosophy-title {
+        font-size: 24px; /* 제목 글씨 작게 */
+    }
+    .philosophy-quote {
+        font-size: 20px; /* 인용구 글씨 작게 */
+    }
+    .philosophy-content p {
+        font-size: 16px; /* 본문 글씨 작게 */
+    }
+    .reviews-section h3 {
+        font-size: 22px; /* 제목 글씨 작게 */
+    }
+    .reviews-grid {
+        grid-template-columns: 1fr; /* 1열로 변경 */
+        gap: 20px; /* 간격 줄이기 */
+    }
+    .review-item {
+        padding: 20px; /* 여백 줄이기 */
+    }
+    .review-text {
+        font-size: 14px; /* 글씨 작게 */
+    }
+    
     /* 모바일에서 브랜드 히스토리 */
     .brand-history {
         padding: 40px 0; /* 여백 줄이기 */
@@ -552,4 +724,131 @@ body {
         margin-top: 40px; /* 여백 줄이기 */
         padding: 20px; /* 여백 줄이기 */
     }
+} 
+
+/* 교육철학 섹션 끝 */
+
+/* 보호자 후기 섹션 스타일 */
+.review-section {
+    padding: 4rem 0; /* 위아래 여백 */
+    background: #f8f9fa; /* 연한 회색 배경 */
+}
+
+/* 후기 그리드 컨테이너 */
+.review-grid {
+    display: grid; /* 그리드 레이아웃 */
+    grid-template-columns: repeat(3, 1fr); /* 3열로 배치 */
+    gap: 2rem; /* 카드 사이 간격 */
+    margin-top: 2rem; /* 제목과 간격 */
+}
+
+/* 후기 카드 스타일 */
+.review-card {
+    background: #fff; /* 흰색 배경 */
+    padding: 2rem; /* 내부 여백 */
+    border-radius: 15px; /* 둥근 모서리 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    text-align: center; /* 가운데 정렬 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 호버 효과 */
+}
+
+/* 후기 카드 호버 효과 */
+.review-card:hover {
+    transform: translateY(-5px); /* 위로 살짝 올라가는 효과 */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* 그림자 진하게 */
+}
+
+/* 별점 스타일 */
+.review-stars {
+    font-size: 1.5rem; /* 별 크기 */
+    color: #ffc107; /* 노란색 별 */
+    margin-bottom: 1rem; /* 아래 간격 */
+}
+
+/* 후기 작성자 스타일 */
+.review-author {
+    font-size: 1.1rem; /* 글씨 크기 */
+    font-weight: bold; /* 굵게 */
+    color: #333; /* 어두운 글씨 */
+    margin-bottom: 1rem; /* 아래 간격 */
+}
+
+/* 후기 내용 스타일 */
+.review-content {
+    line-height: 1.6; /* 줄 간격 */
+}
+
+/* 후기 내용 각 줄 스타일 */
+.review-content p {
+    margin: 0.5rem 0; /* 위아래 간격 */
+    color: #666; /* 회색 글씨 */
+    font-size: 1rem; /* 글씨 크기 */
+}
+
+/* 모바일 반응형 (768px 이하) */
+@media (max-width: 768px) {
+    .review-grid {
+        grid-template-columns: 1fr; /* 1열로 변경 */
+        gap: 1.5rem; /* 간격 줄이기 */
+    }
+    
+    .review-card {
+        padding: 1.5rem; /* 패딩 줄이기 */
+    }
+    
+    .review-section {
+        padding: 3rem 0; /* 패딩 줄이기 */
+    }
+} 
+
+/* 후기 더보기 버튼 스타일 */
+.review-toggle-btn {
+    background: #ff6b35; /* 오렌지 배경 */
+    color: #fff; /* 흰색 글씨 */
+    border: none; /* 테두리 없음 */
+    padding: 0.5rem 1rem; /* 내부 여백 */
+    border-radius: 20px; /* 둥근 모서리 */
+    font-size: 0.9rem; /* 글씨 크기 */
+    cursor: pointer; /* 마우스 포인터 */
+    margin-top: 1rem; /* 위쪽 간격 */
+    transition: background 0.3s ease; /* 부드러운 전환 */
+}
+
+/* 더보기 버튼 호버 효과 */
+.review-toggle-btn:hover {
+    background: #e55a2b; /* 더 진한 오렌지 */
+}
+
+/* 후기 더보기 내용 스타일 */
+.review-more-content {
+    margin-top: 1rem; /* 위쪽 간격 */
+    padding-top: 1rem; /* 내부 위쪽 여백 */
+    border-top: 1px solid #eee; /* 위쪽 테두리 */
+}
+
+/* 후기모음 링크 섹션 */
+.review-more-link {
+    text-align: center; /* 가운데 정렬 */
+    margin-top: 3rem; /* 위쪽 간격 */
+}
+
+/* 후기모음 버튼 스타일 */
+.review-more-btn {
+    display: inline-block; /* 인라인 블록 */
+    background: #333; /* 어두운 배경 */
+    color: #fff; /* 흰색 글씨 */
+    text-decoration: none; /* 밑줄 제거 */
+    padding: 1rem 2rem; /* 내부 여백 */
+    border-radius: 30px; /* 둥근 모서리 */
+    font-size: 1.1rem; /* 글씨 크기 */
+    font-weight: bold; /* 굵은 글씨 */
+    transition: all 0.3s ease; /* 부드러운 전환 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+/* 후기모음 버튼 호버 효과 */
+.review-more-btn:hover {
+    background: #555; /* 더 밝은 배경 */
+    transform: translateY(-2px); /* 위로 살짝 이동 */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* 그림자 진하게 */
 } 
