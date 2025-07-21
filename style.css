@@ -634,24 +634,48 @@ body {
     margin-top: 12px !important;
 }
 
+/* 반응형: 타블릿에서 보기 좋게 */
+@media (max-width: 768px) and (min-width: 601px) {
+    .main-nav a {
+        font-size: 0.95rem; /* 타블릿에서 글자 크기 약간 줄이기 */
+        gap: 15px;
+    }
+    .brand-name {
+        font-size: 1.3rem; /* 타블릿에서 브랜드명 크기 조정 */
+    }
+}
+
 /* 반응형: 모바일에서 보기 좋게 */
 @media (max-width: 600px) {
     .main-header {
         flex-direction: column;
         align-items: stretch;
-        gap: 8px;
-        padding: 12px 8px;
+        gap: 6px; /* 헤더 내부 간격 줄이기 */
+        padding: 10px 8px; /* 패딩 줄이기 */
     }
     .main-nav {
-        justify-content: flex-start;
-        gap: 12px;
+        justify-content: center; /* 가운데 정렬로 변경 */
+        gap: 3px; /* 간격 최대한 줄이기 */
+        flex-wrap: nowrap; /* 줄바꿈 방지 */
+    }
+    .main-nav a {
+        font-size: 0.7rem; /* 모바일에서 글자 크기 대폭 줄이기 */
+        padding: 3px 5px; /* 패딩 최대한 줄이기 */
+        white-space: nowrap; /* 텍스트 줄바꿈 방지 */
     }
     .brand-name {
         margin-left: 0;
         text-align: center;
+        font-size: 1.1rem; /* 모바일에서 브랜드명 크기 줄이기 */
     }
     .logo {
         margin: 0 auto;
+        width: 35px; /* 모바일에서 로고 크기 더 줄이기 */
+        height: 35px;
+    }
+    .consult-btn {
+        font-size: 0.8rem; /* 모바일에서 상담하기 버튼 크기 줄이기 */
+        padding: 5px 12px; /* 패딩 줄이기 */
     }
     
     /* 모바일에서 히어로 캐러셀 */
@@ -775,6 +799,30 @@ body {
     .contact-info {
         margin-top: 40px; /* 여백 줄이기 */
         padding: 20px; /* 여백 줄이기 */
+    }
+}
+
+/* 반응형: 작은 모바일에서 더욱 최적화 */
+@media (max-width: 480px) {
+    .main-nav {
+        gap: 2px; /* 간격 최대한 줄이기 */
+        flex-wrap: nowrap; /* 줄바꿈 방지 */
+        justify-content: space-between; /* 공간 균등 배분 */
+    }
+    .main-nav a {
+        font-size: 0.65rem; /* 글자 크기 최대한 줄이기 */
+        padding: 2px 3px; /* 패딩 최대한 줄이기 */
+        white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    }
+    .brand-name {
+        font-size: 1rem; /* 브랜드명 더 줄이기 */
+    }
+    .consult-btn {
+        font-size: 0.75rem; /* 상담하기 버튼 더 줄이기 */
+        padding: 4px 10px;
+    }
+    .main-header {
+        padding: 6px 4px; /* 헤더 패딩 최대한 줄이기 */
     }
 } 
 
