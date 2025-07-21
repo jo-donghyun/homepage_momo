@@ -14,11 +14,18 @@
 <body>
     <!-- 헤더 시작 -->
     <header class="main-header">
-        <!-- 왼쪽: 로고 이미지 -->
-        <img src="image/logo1.jpg" alt="로고" class="logo">
-        <!-- 로고 옆 브랜드 이름 -->
-        <span class="brand-name">반려견 유치원, 모모댕댕</span>
-        <!-- 가운데 메뉴들 -->
+        <!-- 상단: 로고+브랜드명(좌측) + 상담하기(우측) -->
+        <div class="header-top">
+            <div class="brand-container">
+                <!-- 왼쪽: 로고 이미지 -->
+                <img src="image/logo1.jpg" alt="로고" class="logo">
+                <!-- 로고 옆 브랜드 이름 -->
+                <span class="brand-name">반려견 유치원, 모모댕댕</span>
+            </div>
+            <!-- 오른쪽: 상담하기 버튼 -->
+            <button class="consult-btn">📞 상담하기</button>
+        </div>
+        <!-- 하단: 가운데 메뉴들 -->
         <nav class="main-nav">
             <a href="#intro">모모댕댕 소개</a>
             <a href="#philosophy">교육철학</a>
@@ -26,8 +33,6 @@
             <a href="#review">보호자후기</a>
             <a href="#contact">문의하기</a>
         </nav>
-        <!-- 오른쪽: 상담하기 버튼 -->
-        <button class="consult-btn">📞 상담하기</button>
     </header>
     <!-- 헤더 끝 -->
 

@@ -9,14 +9,27 @@ body {
 
 /* 헤더 전체 스타일 */
 .main-header {
-    display: flex; /* 가로로 나란히 배치 */
-    align-items: center; /* 세로 가운데 정렬 */
-    justify-content: space-between; /* 양쪽 끝과 가운데로 배치 */
-    gap: 10px; /* 사이사이 간격 10px */
+    display: flex;
+    flex-direction: column; /* 세로로 배치 */
+    gap: 12px; /* 상하 간격 */
     padding: 16px 32px;
     box-sizing: border-box;
     max-width: 1200px;
     margin: 0 auto; /* 가운데 정렬 */
+}
+
+/* 헤더 상단 (로고+브랜드명, 상담하기 버튼) */
+.header-top {
+    display: flex;
+    justify-content: space-between; /* 양쪽 끝으로 배치 */
+    align-items: center; /* 세로 가운데 정렬 */
+}
+
+/* 브랜드 컨테이너 (로고 + 브랜드명) */
+.brand-container {
+    display: flex;
+    align-items: center; /* 세로 가운데 정렬 */
+    gap: 12px; /* 로고와 브랜드명 사이 간격 */
 }
 
 /* 로고 이미지 스타일 */
@@ -31,15 +44,14 @@ body {
 .brand-name {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-left: 12px;
+    margin-left: 0; /* margin-left 제거 */
 }
 
 /* 메뉴 네비게이션 스타일 */
 .main-nav {
     display: flex;
     gap: 20px;
-    flex: 1;
-    justify-content: center;
+    justify-content: center; /* 중앙 정렬 */
 }
 .main-nav a {
     text-decoration: none;
@@ -636,12 +648,26 @@ body {
 
 /* 반응형: 타블릿에서 보기 좋게 */
 @media (max-width: 768px) and (min-width: 601px) {
-    .main-nav a {
-        font-size: 0.95rem; /* 타블릿에서 글자 크기 약간 줄이기 */
-        gap: 15px;
+    .header-top {
+        align-items: center; /* 중앙 정렬 유지 */
+    }
+    .brand-container {
+        gap: 10px; /* 간격 조정 */
     }
     .brand-name {
         font-size: 1.3rem; /* 타블릿에서 브랜드명 크기 조정 */
+    }
+    .logo {
+        width: 42px; /* 로고 크기 약간 줄이기 */
+        height: 42px;
+    }
+    .consult-btn {
+        font-size: 0.95rem; /* 상담하기 버튼 크기 조정 */
+        padding: 7px 18px;
+    }
+    .main-nav a {
+        font-size: 0.95rem; /* 타블릿에서 글자 크기 약간 줄이기 */
+        gap: 15px;
     }
 }
 
@@ -649,9 +675,29 @@ body {
 @media (max-width: 600px) {
     .main-header {
         flex-direction: column;
-        align-items: stretch;
-        gap: 6px; /* 헤더 내부 간격 줄이기 */
+        gap: 8px; /* 헤더 내부 간격 조정 */
         padding: 10px 8px; /* 패딩 줄이기 */
+    }
+    .header-top {
+        flex-direction: column; /* 모바일에서는 세로 배치 */
+        gap: 8px;
+        align-items: center;
+    }
+    .brand-container {
+        justify-content: center; /* 중앙 정렬 */
+        gap: 8px; /* 간격 조정 */
+    }
+    .brand-name {
+        font-size: 1.1rem; /* 모바일에서 브랜드명 크기 줄이기 */
+        text-align: center;
+    }
+    .logo {
+        width: 35px; /* 모바일에서 로고 크기 더 줄이기 */
+        height: 35px;
+    }
+    .consult-btn {
+        font-size: 0.8rem; /* 모바일에서 상담하기 버튼 크기 줄이기 */
+        padding: 5px 12px; /* 패딩 줄이기 */
     }
     .main-nav {
         justify-content: center; /* 가운데 정렬로 변경 */
@@ -662,20 +708,6 @@ body {
         font-size: 0.7rem; /* 모바일에서 글자 크기 대폭 줄이기 */
         padding: 3px 5px; /* 패딩 최대한 줄이기 */
         white-space: nowrap; /* 텍스트 줄바꿈 방지 */
-    }
-    .brand-name {
-        margin-left: 0;
-        text-align: center;
-        font-size: 1.1rem; /* 모바일에서 브랜드명 크기 줄이기 */
-    }
-    .logo {
-        margin: 0 auto;
-        width: 35px; /* 모바일에서 로고 크기 더 줄이기 */
-        height: 35px;
-    }
-    .consult-btn {
-        font-size: 0.8rem; /* 모바일에서 상담하기 버튼 크기 줄이기 */
-        padding: 5px 12px; /* 패딩 줄이기 */
     }
     
     /* 모바일에서 히어로 캐러셀 */
@@ -804,6 +836,27 @@ body {
 
 /* 반응형: 작은 모바일에서 더욱 최적화 */
 @media (max-width: 480px) {
+    .main-header {
+        padding: 6px 4px; /* 헤더 패딩 최대한 줄이기 */
+        gap: 6px;
+    }
+    .header-top {
+        gap: 6px;
+    }
+    .brand-container {
+        gap: 6px; /* 로고와 브랜드명 간격 줄이기 */
+    }
+    .brand-name {
+        font-size: 0.95rem; /* 브랜드명 더 작게 */
+    }
+    .logo {
+        width: 30px; /* 로고 더 작게 */
+        height: 30px;
+    }
+    .consult-btn {
+        font-size: 0.7rem; /* 상담하기 버튼 더 작게 */
+        padding: 4px 8px;
+    }
     .main-nav {
         gap: 2px; /* 간격 최대한 줄이기 */
         flex-wrap: nowrap; /* 줄바꿈 방지 */
@@ -814,15 +867,128 @@ body {
         padding: 2px 3px; /* 패딩 최대한 줄이기 */
         white-space: nowrap; /* 텍스트 줄바꿈 방지 */
     }
-    .brand-name {
-        font-size: 1rem; /* 브랜드명 더 줄이기 */
+
+    /* 모바일에서 히어로 캐러셀 */
+    .hero-carousel {
+        height: 60vh; /* 모바일에서는 조금 작게 */
     }
-    .consult-btn {
-        font-size: 0.75rem; /* 상담하기 버튼 더 줄이기 */
-        padding: 4px 10px;
+    .brand-title {
+        font-size: 2rem; /* 모바일에서는 글씨 작게 */
     }
-    .main-header {
-        padding: 6px 4px; /* 헤더 패딩 최대한 줄이기 */
+    .slide-content h2 {
+        font-size: 1.5rem;
+    }
+    .slide-quote {
+        font-size: 1.2rem;
+    }
+    .slide-content p {
+        font-size: 1rem;
+    }
+    .carousel-btn {
+        font-size: 1.5rem; /* 모바일에서는 화살표 작게 */
+        padding: 8px;
+    }
+    
+    /* 모바일에서 소개 섹션 */
+    .intro-section {
+        padding: 40px 0; /* 여백 줄이기 */
+    }
+    .intro-container {
+        gap: 30px; /* 간격 줄이기 */
+    }
+    .intro-title {
+        font-size: 24px; /* 제목 글씨 작게 */
+    }
+    
+    /* 모바일에서 이미지 배치 */
+    .intro-images-horizontal {
+        flex-direction: column; /* 세로로 배치 */
+        gap: 25px; /* 간격 조정 */
+        margin-bottom: 35px; /* 여백 조정 */
+    }
+    
+    .image-item {
+        max-width: 100%; /* 최대 너비 100% */
+    }
+    
+    .image-item img {
+        height: 320px; /* 모바일에서도 높이 증가 */
+    }
+    
+    /* 모바일에서 좌우 콘텐츠 */
+    .content-row {
+        flex-direction: column; /* 세로로 배치 */
+        gap: 30px; /* 간격 줄이기 */
+    }
+    .principle-section h3,
+    .promise-section h3,
+    .stats-section h3 {
+        font-size: 20px; /* 제목 글씨 작게 */
+    }
+    .principle-item,
+    .promise-item {
+        flex: none; /* 모바일에서는 flex 해제 */
+        min-height: 100px; /* 모바일에서 최소 높이 */
+    }
+    .principle-item h4 {
+        font-size: 16px; /* 제목 글씨 작게 */
+    }
+    .promise-item h4 {
+        font-size: 16px; /* 제목 글씨 작게 */
+    }
+    .principle-item p,
+    .promise-item p {
+        font-size: 16px; /* 본문 글씨 작게 */
+    }
+    .stat-item {
+        font-size: 18px; /* 통계 글씨 작게 */
+    }
+    
+    /* 모바일에서 교육철학 섹션 */
+    .philosophy-section {
+        padding: 40px 0; /* 여백 줄이기 */
+    }
+    .philosophy-title {
+        font-size: 24px; /* 제목 글씨 작게 */
+    }
+    .philosophy-quote {
+        font-size: 20px; /* 인용구 글씨 작게 */
+    }
+    .philosophy-content p {
+        font-size: 16px; /* 본문 글씨 작게 */
+    }
+    .reviews-section h3 {
+        font-size: 22px; /* 제목 글씨 작게 */
+    }
+    .reviews-grid {
+        grid-template-columns: 1fr; /* 1열로 변경 */
+        gap: 20px; /* 간격 줄이기 */
+    }
+    .review-item {
+        padding: 20px; /* 여백 줄이기 */
+    }
+    .review-text {
+        font-size: 14px; /* 글씨 작게 */
+    }
+    
+    /* 모바일에서 브랜드 히스토리 */
+    .brand-history {
+        padding: 40px 0; /* 여백 줄이기 */
+    }
+    .container {
+        flex-direction: column; /* 세로로 배치 */
+        gap: 30px; /* 간격 줄이기 */
+    }
+    .history-title {
+        font-size: 20px; /* 제목 글씨 작게 */
+    }
+    .story-preview p,
+    .story-full p {
+        font-size: 16px; /* 글씨 작게 */
+    }
+    .contact-info {
+        margin-top: 40px; /* 여백 줄이기 */
+        padding: 20px; /* 여백 줄이기 */
     }
 } 
 
