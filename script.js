@@ -163,4 +163,29 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+});
+
+// 프로그램 더보기/닫기 기능
+document.addEventListener('DOMContentLoaded', function() {
+    // 모든 프로그램 더보기 버튼을 찾아서 이벤트 리스너 추가
+    const programMoreBtns = document.querySelectorAll('.more-btn');
+    
+    programMoreBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            // 버튼의 부모 요소에서 더보기 내용 찾기
+            const programDescription = btn.closest('.program-description');
+            const fullText = programDescription.querySelector('.full-text');
+            
+            if (fullText) {
+                // 현재 상태 확인하고 토글
+                if (fullText.style.display === 'none' || fullText.style.display === '') {
+                    fullText.style.display = 'block'; // 전체 내용 보이기
+                    btn.textContent = '닫기'; // 버튼 텍스트 변경
+                } else {
+                    fullText.style.display = 'none'; // 전체 내용 숨기기
+                    btn.textContent = '더보기'; // 버튼 텍스트 변경
+                }
+            }
+        });
+    });
 }); 

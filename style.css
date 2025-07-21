@@ -224,51 +224,56 @@ body {
     max-width: 1200px; /* 최대 너비 */
     margin: 0 auto; /* 가운데 정렬 */
     padding: 0 20px; /* 좌우 여백 */
-    display: flex; /* 가로로 나란히 배치 */
-    gap: 60px; /* 사이 간격 */
-    align-items: flex-start; /* 위쪽 정렬 */
-}
-
-/* 좌측 이미지 영역 스타일 */
-.intro-images {
-    flex: 1; /* 공간의 절반 차지 */
-    display: flex; /* 가로로 나란히 배치 */
+    display: flex; /* 세로 배치 */
     flex-direction: column; /* 세로로 배치 */
-    gap: 20px; /* 이미지 사이 간격 */
+    gap: 40px; /* 사이 간격 */
 }
 
-/* 상단 이미지 스타일 */
-.image-top img {
+/* 이미지 가로 배치 영역 스타일 */
+.intro-images-horizontal {
+    display: flex; /* 가로로 나란히 배치 */
+    gap: 40px; /* 이미지 사이 간격 증가 */
+    justify-content: center; /* 중앙 정렬 */
+    margin-bottom: 30px; /* 아래 여백 증가 */
+}
+
+/* 이미지 아이템 스타일 */
+.image-item {
+    flex: 1; /* 동일한 비율로 차지 */
+    max-width: 500px; /* 최대 너비 증가 */
+}
+
+.image-item img {
     width: 100%; /* 이미지 너비 꽉 차게 */
-    height: auto; /* 높이는 자동 */
+    height: 400px; /* 높이 증가 */
+    object-fit: cover; /* 비율 유지하며 영역에 맞춤 */
     border-radius: 12px; /* 둥근 모서리 */
     box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* 그림자 효과 */
 }
 
-/* 하단 이미지 스타일 */
-.image-bottom img {
-    width: 100%; /* 이미지 너비 꽉 차게 */
-    height: auto; /* 높이는 자동 */
-    border-radius: 12px; /* 둥근 모서리 */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* 그림자 효과 */
-}
-
-/* 우측 콘텐츠 영역 스타일 */
-.intro-content {
-    flex: 1; /* 공간의 절반 차지 */
+/* 좌우 콘텐츠 배치 영역 스타일 */
+.content-row {
+    display: flex; /* 가로로 나란히 배치 */
+    gap: 40px; /* 사이 간격 */
+    align-items: stretch; /* 높이를 동일하게 맞춤 */
 }
 
 /* 소개 제목 스타일 */
 .intro-title {
-    font-size: 24px; /* 제목 24px */
+    font-size: 28px; /* 제목 크기 증가 */
     font-weight: bold;
     color: #222;
-    margin-bottom: 40px; /* 아래 여백 */
+    text-align: center; /* 중앙 정렬 */
+    margin-bottom: 30px; /* 아래 여백 조정 */
 }
 
 /* 운영 원칙 섹션 스타일 */
 .principle-section {
+    flex: 1; /* 좌우 동일한 비율로 차지 */
     margin-bottom: 40px; /* 아래 여백 */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* 부모 높이에 맞춤 */
 }
 
 .principle-section h3 {
@@ -285,6 +290,15 @@ body {
     background: #f8f9fa; /* 연한 회색 배경 */
     border-radius: 12px; /* 둥근 모서리 */
     border-left: 4px solid #ff6b35; /* 왼쪽 주황색 선 */
+    flex: 1; /* 동일한 높이로 확장 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 내용을 위쪽부터 배치 */
+}
+
+/* 마지막 원칙 아이템 하단 여백 제거 */
+.principle-item:last-child {
+    margin-bottom: 0;
 }
 
 .principle-item h4 {
@@ -303,7 +317,11 @@ body {
 
 /* 고객 약속 섹션 스타일 */
 .promise-section {
+    flex: 1; /* 좌우 동일한 비율로 차지 */
     margin-bottom: 40px; /* 아래 여백 */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* 부모 높이에 맞춤 */
 }
 
 .promise-section h3 {
@@ -315,11 +333,20 @@ body {
 
 /* 약속 아이템 스타일 */
 .promise-item {
-    margin-bottom: 20px; /* 아래 여백 */
-    padding: 15px; /* 안쪽 여백 */
+    margin-bottom: 25px; /* 아래 여백 통일 */
+    padding: 20px; /* 안쪽 여백 통일 */
     background: #f0f8ff; /* 연한 파란색 배경 */
     border-radius: 12px; /* 둥근 모서리 */
     border-left: 4px solid #4CAF50; /* 왼쪽 초록색 선 */
+    flex: 1; /* 동일한 높이로 확장 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 내용을 위쪽부터 배치 */
+}
+
+/* 마지막 약속 아이템 하단 여백 제거 */
+.promise-item:last-child {
+    margin-bottom: 0;
 }
 
 .promise-item h4 {
@@ -653,16 +680,41 @@ body {
         padding: 40px 0; /* 여백 줄이기 */
     }
     .intro-container {
-        flex-direction: column; /* 세로로 배치 */
         gap: 30px; /* 간격 줄이기 */
     }
     .intro-title {
-        font-size: 20px; /* 제목 글씨 작게 */
+        font-size: 24px; /* 제목 글씨 작게 */
+    }
+    
+    /* 모바일에서 이미지 배치 */
+    .intro-images-horizontal {
+        flex-direction: column; /* 세로로 배치 */
+        gap: 25px; /* 간격 조정 */
+        margin-bottom: 35px; /* 여백 조정 */
+    }
+    
+    .image-item {
+        max-width: 100%; /* 최대 너비 100% */
+    }
+    
+    .image-item img {
+        height: 320px; /* 모바일에서도 높이 증가 */
+    }
+    
+    /* 모바일에서 좌우 콘텐츠 */
+    .content-row {
+        flex-direction: column; /* 세로로 배치 */
+        gap: 30px; /* 간격 줄이기 */
     }
     .principle-section h3,
     .promise-section h3,
     .stats-section h3 {
         font-size: 20px; /* 제목 글씨 작게 */
+    }
+    .principle-item,
+    .promise-item {
+        flex: none; /* 모바일에서는 flex 해제 */
+        min-height: 100px; /* 모바일에서 최소 높이 */
     }
     .principle-item h4 {
         font-size: 16px; /* 제목 글씨 작게 */
@@ -728,10 +780,179 @@ body {
 
 /* 교육철학 섹션 끝 */
 
+/* 프로그램 섹션 스타일 */
+.program-section {
+    padding: 80px 0; /* 위아래 여백 */
+    background: #fff; /* 흰색 배경 */
+}
+
+/* 프로그램 컨테이너 스타일 */
+.program-container {
+    max-width: 1200px; /* 최대 너비 */
+    margin: 0 auto; /* 가운데 정렬 */
+    padding: 0 20px; /* 좌우 여백 */
+    text-align: center; /* 가운데 정렬 */
+}
+
+/* 프로그램 로고 스타일 */
+.program-logo {
+    margin-bottom: 30px; /* 아래 여백 */
+}
+
+.program-logo img {
+    width: 80px; /* 로고 크기 */
+    height: 80px;
+    border-radius: 50%; /* 원형으로 만들기 */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* 그림자 효과 */
+}
+
+/* 프로그램 제목 스타일 */
+.product-title {
+    font-size: 2.5rem; /* 큰 글씨 크기 */
+    font-weight: bold; /* 굵게 */
+    color: #222; /* 검은색 */
+    margin-bottom: 50px; /* 아래 여백 */
+    font-family: 'NEXON Lv1 Gothic', 'Noto Sans KR', sans-serif; /* 넥슨 폰트 */
+}
+
+/* 프로그램 그리드 (2x2 배치) 스타일 */
+.program-grid {
+    display: grid; /* 그리드 레이아웃 */
+    grid-template-columns: repeat(2, 1fr); /* 2열로 배치 */
+    gap: 40px; /* 카드 사이 간격 */
+    margin-top: 40px; /* 위 여백 */
+}
+
+/* 프로그램 아이템 스타일 */
+.program-item {
+    background: #fff; /* 흰색 배경 */
+    border-radius: 15px; /* 둥근 모서리 */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* 그림자 효과 */
+    overflow: hidden; /* 넘치는 부분 숨기기 */
+    transition: all 0.3s ease; /* 부드러운 전환 효과 */
+    text-align: left; /* 내용은 왼쪽 정렬 */
+}
+
+/* 프로그램 아이템 호버 효과 */
+.program-item:hover {
+    transform: translateY(-5px); /* 위로 살짝 올라가는 효과 */
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15); /* 그림자 진하게 */
+}
+
+/* 프로그램 이미지 스타일 */
+.program-image {
+    width: 100%; /* 전체 너비 */
+    height: 250px; /* 고정 높이 */
+    overflow: hidden; /* 넘치는 부분 숨기기 */
+}
+
+.program-image img {
+    width: calc(100% - 6px); /* 좌우 여백 3px씩 (총 6px) */
+    height: 100%; /* 높이 꽉 차게 */
+    object-fit: cover; /* 비율 유지하며 크기 맞춤 */
+    margin: 0 3px; /* 좌우 여백 3px */
+}
+
+/* 프로그램 내용 스타일 */
+.program-content {
+    padding: 25px; /* 내부 여백 */
+}
+
+/* 프로그램 제목 스타일 */
+.program-content h3 {
+    font-size: 1.3rem; /* 제목 크기 */
+    font-weight: bold; /* 굵게 */
+    color: #222; /* 검은색 */
+    margin-bottom: 15px; /* 아래 여백 */
+    font-family: 'NEXON Lv1 Gothic', 'Noto Sans KR', sans-serif; /* 넥슨 폰트 */
+}
+
+/* 프로그램 설명 텍스트 스타일 */
+.program-description p {
+    font-size: 1rem; /* 글씨 크기 */
+    line-height: 1.6; /* 줄 간격 */
+    color: #666; /* 회색 글씨 */
+    margin-bottom: 8px; /* 문단 간격 */
+}
+
+/* 미리보기 텍스트 (처음 3줄) 스타일 */
+.preview-text {
+    display: block; /* 처음에는 보이게 */
+}
+
+/* 전체 텍스트 (더보기 클릭 후) 스타일 */
+.full-text {
+    margin-top: 10px; /* 위 여백 */
+    padding-top: 15px; /* 내부 위 여백 */
+    border-top: 1px solid #eee; /* 위쪽 구분선 */
+}
+
+/* 더보기 버튼 스타일 */
+.more-btn {
+    background: #ff6b35; /* 주황색 배경 */
+    color: #fff; /* 흰색 글씨 */
+    border: none; /* 테두리 없음 */
+    padding: 10px 20px; /* 내부 여백 */
+    border-radius: 25px; /* 둥근 모서리 */
+    font-size: 0.9rem; /* 글씨 크기 */
+    cursor: pointer; /* 마우스 포인터 */
+    margin-top: 15px; /* 위 여백 */
+    transition: all 0.3s ease; /* 부드러운 전환 */
+    font-family: 'NEXON Lv1 Gothic', 'Noto Sans KR', sans-serif; /* 넥슨 폰트 */
+}
+
+/* 더보기 버튼 호버 효과 */
+.more-btn:hover {
+    background: #e55a2b; /* 더 진한 주황색 */
+    transform: translateY(-2px); /* 위로 살짝 이동 */
+}
+
+/* 모바일 반응형 (768px 이하) */
+@media (max-width: 768px) {
+    .program-section {
+        padding: 50px 0; /* 여백 줄이기 */
+    }
+    
+    .product-title {
+        font-size: 2rem; /* 제목 크기 줄이기 */
+        margin-bottom: 30px; /* 여백 줄이기 */
+    }
+    
+    .program-grid {
+        grid-template-columns: 1fr; /* 1열로 변경 */
+        gap: 30px; /* 간격 줄이기 */
+    }
+    
+    .program-image {
+        height: 200px; /* 이미지 높이 줄이기 */
+    }
+    
+    .program-content {
+        padding: 20px; /* 내부 여백 줄이기 */
+    }
+    
+    .program-content h3 {
+        font-size: 1.2rem; /* 제목 크기 줄이기 */
+    }
+    
+    .program-description p {
+        font-size: 0.9rem; /* 글씨 크기 줄이기 */
+    }
+}
+
 /* 보호자 후기 섹션 스타일 */
 .review-section {
     padding: 4rem 0; /* 위아래 여백 */
     background: #f8f9fa; /* 연한 회색 배경 */
+}
+
+/* 섹션 제목 스타일 */
+.section-title {
+    font-size: 2.5rem; /* 제목 크기 */
+    font-weight: bold; /* 굵게 */
+    color: #222; /* 어두운 글씨 */
+    text-align: center; /* 가운데 정렬 */
+    margin-bottom: 3rem; /* 아래 간격 */
 }
 
 /* 후기 그리드 컨테이너 */
@@ -799,6 +1020,17 @@ body {
     .review-section {
         padding: 3rem 0; /* 패딩 줄이기 */
     }
+    
+    .section-title {
+        font-size: 2rem; /* 모바일에서 제목 크기 줄이기 */
+        margin-bottom: 2rem; /* 간격 줄이기 */
+        text-align: center; /* 모바일에서도 중앙 정렬 확실히 */
+    }
+    
+    .review-more-link {
+        margin-top: 2.5rem; /* 모바일에서 간격 줄이기 */
+        padding: 1.5rem 0; /* 패딩 줄이기 */
+    }
 } 
 
 /* 후기 더보기 버튼 스타일 */
@@ -829,7 +1061,9 @@ body {
 /* 후기모음 링크 섹션 */
 .review-more-link {
     text-align: center; /* 가운데 정렬 */
-    margin-top: 3rem; /* 위쪽 간격 */
+    margin-top: 4rem; /* 위쪽 간격 늘리기 */
+    padding: 2rem 0; /* 위아래 여백 추가 */
+    border-top: 1px solid #e0e0e0; /* 위쪽 구분선 */
 }
 
 /* 후기모음 버튼 스타일 */
