@@ -1438,21 +1438,30 @@ body {
     }
 } 
 
-/* 통계 섹션 모바일 최적화 */
+/* 통계 섹션 모바일 최적화 - 더 구체적인 선택자로 인라인 스타일 덮어쓰기 */
 @media (max-width: 768px) {
     .stats-section {
         padding: 30px 20px !important; /* 모바일에서 패딩 줄이기 */
     }
     
-    .stats-container {
-        gap: 15px !important; /* 모바일에서 간격 줄이기 */
-        justify-content: center !important;
+    /* 인라인 스타일을 덮어쓰기 위한 더 구체적인 선택자 */
+    .intro-section .stats-section .stats-container {
+        display: grid !important; /* Grid로 변경하여 더 확실한 2x2 배치 */
+        grid-template-columns: 1fr 1fr !important; /* 2열 그리드 */
+        grid-template-rows: auto auto !important; /* 2행 자동 높이 */
+        gap: 15px !important; /* 그리드 간격 */
+        justify-items: center !important; /* 아이템 중앙 정렬 */
+        flex-wrap: unset !important; /* flex-wrap 제거 */
+        justify-content: unset !important; /* justify-content 제거 */
     }
     
-    .stats-card {
-        flex: 1 1 calc(50% - 7.5px) !important; /* 2x2 그리드를 위해 50%에서 gap의 절반 빼기 */
-        max-width: calc(50% - 7.5px) !important; /* 최대 너비도 동일하게 */
-        min-width: 0 !important; /* 최소 너비 제거 */
+    /* 인라인 스타일을 덮어쓰기 위한 더 구체적인 선택자 */  
+    .intro-section .stats-section .stats-card {
+        flex: unset !important; /* flex 제거 */
+        width: 100% !important; /* 그리드 셀을 가득 채우기 */
+        max-width: 180px !important; /* 최대 너비 제한 */
+        min-width: unset !important; /* 최소 너비 제거 */
+        box-sizing: border-box !important;
         font-size: 14px; /* 모바일에서 폰트 크기 조정 */
     }
     
@@ -1482,13 +1491,24 @@ body {
         padding: 20px 15px !important; /* 작은 모바일에서 패딩 더 줄이기 */
     }
     
-    .stats-container {
-        gap: 12px !important; /* 더 작은 간격 */
+    /* 인라인 스타일을 덮어쓰기 위한 더 구체적인 선택자 */
+    .intro-section .stats-section .stats-container {
+        display: grid !important; /* Grid로 변경하여 더 확실한 2x2 배치 */
+        grid-template-columns: 1fr 1fr !important; /* 2열 그리드 */
+        grid-template-rows: auto auto !important; /* 2행 자동 높이 */
+        gap: 12px !important; /* 더 작은 그리드 간격 */
+        justify-items: center !important; /* 아이템 중앙 정렬 */
+        flex-wrap: unset !important; /* flex-wrap 제거 */
+        justify-content: unset !important; /* justify-content 제거 */
     }
     
-    .stats-card {
-        flex: 1 1 calc(50% - 6px) !important; /* gap에 맞춰 조정 */
-        max-width: calc(50% - 6px) !important;
+    /* 인라인 스타일을 덮어쓰기 위한 더 구체적인 선택자 */
+    .intro-section .stats-section .stats-card {
+        flex: unset !important; /* flex 제거 */
+        width: 100% !important; /* 그리드 셀을 가득 채우기 */
+        max-width: 150px !important; /* 작은 화면에서 최대 너비 더 줄이기 */
+        min-width: unset !important; /* 최소 너비 제거 */
+        box-sizing: border-box !important;
         padding: 18px !important; /* 카드 내부 패딩 줄이기 */
     }
     
