@@ -55,31 +55,8 @@ function stopAutoSlide() {
     clearInterval(autoSlideTimer);
 }
 
-// 스토리 더보기/닫기 기능
-function setupStoryToggle() {
-    const toggleBtn = document.querySelector('.story-toggle-btn');
-    const storyPreview = document.querySelector('.story-preview');
-    const storyFull = document.querySelector('.story-full');
-    
-    if (toggleBtn) {
-        toggleBtn.addEventListener('click', function() {
-            // 현재 상태 확인
-            const isFullVisible = storyFull.style.display !== 'none';
-            
-            if (isFullVisible) {
-                // 전체 스토리가 보이는 상태면 숨기기
-                storyFull.style.display = 'none';
-                storyPreview.style.display = 'block';
-                toggleBtn.textContent = '더보기';
-            } else {
-                // 미리보기가 보이는 상태면 전체 보이기
-                storyPreview.style.display = 'none';
-                storyFull.style.display = 'block';
-                toggleBtn.textContent = '닫기';
-            }
-        });
-    }
-}
+
+
 
 // 이벤트 리스너 설정
 document.addEventListener('DOMContentLoaded', function() {
@@ -117,28 +94,10 @@ document.addEventListener('DOMContentLoaded', function() {
             startAutoSlide();
         }
     });
-    
-    // 스토리 토글 기능 설정
-    setupStoryToggle();
+
 }); 
 
-// 브랜드 히스토리 더보기/닫기 기능
-document.addEventListener('DOMContentLoaded', function() {
-    const toggleBtn = document.querySelector('.story-toggle-btn');
-    const moreContent = document.querySelector('.story-more-content');
-    
-    if (toggleBtn && moreContent) {
-        toggleBtn.addEventListener('click', function() {
-            if (moreContent.style.display === 'none' || moreContent.style.display === '') {
-                moreContent.style.display = 'block';
-                toggleBtn.textContent = '닫기';
-            } else {
-                moreContent.style.display = 'none';
-                toggleBtn.textContent = '더보기';
-            }
-        });
-    }
-});
+
 
 // 보호자 후기 더보기/닫기 기능
 document.addEventListener('DOMContentLoaded', function() {
@@ -163,6 +122,32 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+}); 
+
+// 브랜드 히스토리 더보기/닫기 기능
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtn = document.querySelector('.story-toggle-btn');
+    const storyPreview = document.querySelector('.story-preview');
+    const storyFull = document.querySelector('.story-full');
+    
+    if (toggleBtn && storyPreview && storyFull) {
+        toggleBtn.addEventListener('click', function() {
+            // 현재 상태 확인
+            const isFullVisible = storyFull.style.display !== 'none';
+            
+            if (isFullVisible) {
+                // 전체 스토리가 보이는 상태면 숨기기
+                storyFull.style.display = 'none';
+                storyPreview.style.display = 'block';
+                toggleBtn.textContent = '더보기';
+            } else {
+                // 미리보기가 보이는 상태면 전체 보이기
+                storyPreview.style.display = 'none';
+                storyFull.style.display = 'block';
+                toggleBtn.textContent = '닫기';
+            }
+        });
+    }
 });
 
 // 프로그램 더보기/닫기 기능

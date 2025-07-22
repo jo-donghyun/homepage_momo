@@ -156,11 +156,7 @@ body {
     text-align: center; /* 글자 가운데 정렬 */
     color: #fff; /* 글자색 흰색 */
     z-index: 3; /* 위에 보이게 */
-    background: rgba(0, 0, 0, 0.2); /* 반투명 검정 배경 (매우 투명하게) */
     padding: 2rem 3rem; /* 내부 여백 */
-    border-radius: 20px; /* 둥근 모서리 */
-    backdrop-filter: blur(10px); /* 배경 블러 효과 */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* 그림자 효과 */
     max-width: 90%; /* 최대 너비 제한 */
 }
 
@@ -169,14 +165,26 @@ body {
     font-size: 3rem; /* 글씨 크게 */
     font-weight: bold;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 그림자 효과 (약간 연하게) */
+    text-shadow: 
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000,
+        0 0 10px rgba(0,0,0,0.8),
+        0 0 20px rgba(0,0,0,0.6); /* 강한 외곽선과 그림자 효과 */
 }
 
 /* 슬라이드 제목 스타일 */
 .slide-content h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 그림자 효과 (약간 연하게) */
+    text-shadow: 
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000,
+        0 0 8px rgba(0,0,0,0.8),
+        0 0 15px rgba(0,0,0,0.6); /* 강한 외곽선과 그림자 효과 */
 }
 
 /* 슬라이드 인용구 스타일 */
@@ -185,14 +193,26 @@ body {
     font-weight: bold;
     font-style: italic; /* 기울임체 */
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 그림자 효과 (약간 연하게) */
+    text-shadow: 
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000,
+        0 0 8px rgba(0,0,0,0.8),
+        0 0 15px rgba(0,0,0,0.6); /* 강한 외곽선과 그림자 효과 */
 }
 
 /* 슬라이드 설명 스타일 */
 .slide-content p {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 그림자 효과 (약간 연하게) */
+    text-shadow: 
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000,
+        0 0 6px rgba(0,0,0,0.8),
+        0 0 12px rgba(0,0,0,0.5); /* 강한 외곽선과 그림자 효과 */
 }
 
 /* 화살표 버튼 스타일 */
@@ -430,7 +450,7 @@ body {
 .philosophy-title {
     font-size: 32px; /* 글씨 크게 */
     font-weight: bold; /* 굵게 */
-    color: #222;
+    color: #222; /* 검은색 */
     text-align: center; /* 가운데 정렬 */
     margin-bottom: 20px; /* 아래 여백 */
 }
@@ -523,11 +543,7 @@ body {
     margin: 0; /* 여백 없음 */
 }
 
-/* 모모댕댕 브랜드 히스토리 섹션 스타일 */
-.brand-history {
-    padding: 80px 0; /* 위아래 여백 */
-    background: #f8f9fa; /* 연한 회색 배경 */
-}
+
 
 /* 컨테이너 스타일 */
 .container {
@@ -539,112 +555,7 @@ body {
     align-items: center; /* 세로 가운데 정렬 */
 }
 
-/* 왼쪽 이미지 스타일 */
-.history-image {
-    flex: 1; /* 공간의 절반 차지 */
-}
-.history-image img {
-    width: 100%; /* 이미지 너비 꽉 차게 */
-    height: auto; /* 높이는 자동 */
-    border-radius: 12px; /* 둥근 모서리 */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* 그림자 효과 */
-}
 
-/* 오른쪽 콘텐츠 스타일 */
-.history-content {
-    flex: 1; /* 공간의 절반 차지 */
-}
-
-/* 히스토리 제목 스타일 */
-.history-title {
-    font-size: 24px; /* 제목 24px */
-    font-weight: bold;
-    color: #222;
-    margin-bottom: 30px; /* 아래 여백 */
-}
-
-/* 스토리 텍스트 스타일 */
-.story-preview p,
-.story-full p {
-    font-size: 18px; /* 본문 18px */
-    line-height: 1.6; /* 줄 간격 1.6배 */
-    color: #444;
-    margin-bottom: 16px; /* 문단 간격 */
-    text-align: left; /* 좌측 정렬 */
-}
-
-/* 인용구 스타일 */
-.story-quote {
-    font-size: 18px !important; /* 인용문 18px */
-    font-weight: bold; /* 굵게 */
-    color: #ff6b35 !important; /* 주황색으로 강조 */
-    font-style: italic; /* 기울임체 */
-}
-
-/* 질문형 문장 스타일 */
-.story-question {
-    font-size: 18px !important; /* 질문 18px */
-    font-weight: bold; /* 굵게 */
-    color: #333 !important;
-}
-
-/* 연락처 문장 스타일 */
-.story-contact {
-    font-size: 20px !important; /* 마무리 문장 20px */
-    font-weight: bold;
-    color: #222 !important;
-    text-align: center !important; /* 가운데 정렬 */
-}
-
-/* 서명 스타일 */
-.story-signature {
-    font-size: 20px !important; /* 마무리 문장 20px */
-    font-weight: bold;
-    color: #222 !important;
-    margin-top: 20px !important;
-    text-align: center !important; /* 가운데 정렬 */
-}
-
-/* 더보기/닫기 버튼 스타일 */
-.story-toggle-btn {
-    background: #222; /* 검은색 바탕 */
-    color: #fff; /* 흰색 글자 */
-    border: none; /* 테두리 없음 */
-    padding: 12px 24px; /* 여백 */
-    font-size: 1rem;
-    border-radius: 25px; /* 둥근 모서리 */
-    cursor: pointer; /* 마우스 포인터 */
-    margin-top: 20px; /* 위 여백 */
-    transition: all 0.3s ease; /* 부드러운 변화 */
-}
-.story-toggle-btn:hover {
-    background: #444; /* 마우스 올렸을 때 살짝 밝게 */
-    transform: translateY(-2px); /* 살짝 위로 올라가게 */
-}
-
-/* 연락처 정보 스타일 */
-.contact-info {
-    text-align: center; /* 가운데 정렬 */
-    margin-top: 60px; /* 위 여백 */
-    padding: 40px 20px; /* 여백 */
-    background: #fff; /* 흰색 배경 */
-    border-radius: 12px; /* 둥근 모서리 */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* 그림자 효과 */
-    max-width: 600px; /* 최대 너비 */
-    margin-left: auto; /* 오른쪽 정렬 */
-    margin-right: auto; /* 왼쪽 정렬 */
-}
-.contact-info p {
-    font-size: 1.2rem; /* 글씨 크기 */
-    color: #333;
-    margin-bottom: 8px; /* 문단 간격 */
-}
-.contact-phone {
-    font-size: 1.5rem !important; /* 전화번호 글씨 크게 */
-    font-weight: bold;
-    color: #222 !important;
-    margin-top: 12px !important;
-}
 
 /* 반응형: 타블릿에서 보기 좋게 */
 @media (max-width: 768px) and (min-width: 601px) {
@@ -724,26 +635,67 @@ body {
         padding: 1.5rem 2rem; /* 모바일에서 패딩 줄이기 */
     }
     .brand-title {
-        font-size: 1.1rem; /* 모바일에서 3줄로 보이도록 더 작게 */
+        font-size: 1.1rem; /* 모바일에서 한 줄로 표시 */
         line-height: 1.2;
-        max-width: 80%; /* 너비 제한으로 적절한 줄바꿈 유도 */
+        white-space: nowrap; /* 줄바꿈 방지 */
+        overflow: hidden; /* 넘치는 텍스트 숨기기 */
+        text-overflow: ellipsis; /* 말줄임표 */
+        width: 100%; /* 전체 너비 사용 */
         margin: 0 auto 1rem auto; /* 중앙 정렬 */
+        text-shadow: 
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000,
+            0 0 6px rgba(0,0,0,0.8),
+            0 0 12px rgba(0,0,0,0.6); /* 모바일용 외곽선과 그림자 */
     }
     .slide-content h2 {
-        font-size: 0.95rem; /* 더 작게 */
+        font-size: 0.9rem; /* 한 줄 표시용으로 조정 */
         line-height: 1.2;
+        white-space: nowrap; /* 줄바꿈 방지 */
+        overflow: hidden; /* 넘치는 텍스트 숨기기 */
+        text-overflow: ellipsis; /* 말줄임표 */
+        width: 100%; /* 전체 너비 사용 */
+        text-shadow: 
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000,
+            0 0 5px rgba(0,0,0,0.8),
+            0 0 10px rgba(0,0,0,0.6); /* 모바일용 외곽선과 그림자 */
     }
     .slide-quote {
-        font-size: 0.8rem; /* 더 작게 */
+        font-size: 0.85rem; /* 한 줄 표시용으로 크기 증가 */
         line-height: 1.2;
-        max-width: 85%; /* 너비 제한으로 적절한 줄바꿈 유도 */
+        white-space: nowrap; /* 줄바꿈 방지 */
+        overflow: hidden; /* 넘치는 텍스트 숨기기 */
+        text-overflow: ellipsis; /* 말줄임표 */
+        width: 100%; /* 전체 너비 사용 */
         margin: 0 auto 1rem auto; /* 중앙 정렬 */
+        text-shadow: 
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000,
+            0 0 5px rgba(0,0,0,0.8),
+            0 0 10px rgba(0,0,0,0.6); /* 모바일용 외곽선과 그림자 */
     }
     .slide-content p {
-        font-size: 0.7rem; /* 더 작게 */
+        font-size: 0.75rem; /* 한 줄 표시용으로 크기 증가 */
         line-height: 1.2;
-        max-width: 90%; /* 너비 제한으로 적절한 줄바꿈 유도 */
+        white-space: nowrap; /* 줄바꿈 방지 */
+        overflow: hidden; /* 넘치는 텍스트 숨기기 */
+        text-overflow: ellipsis; /* 말줄임표 */
+        width: 100%; /* 전체 너비 사용 */
         margin: 0 auto 1rem auto; /* 중앙 정렬 */
+        text-shadow: 
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000,
+            0 0 4px rgba(0,0,0,0.8),
+            0 0 8px rgba(0,0,0,0.6); /* 모바일용 외곽선과 그림자 */
     }
     .carousel-btn {
         font-size: 1.2rem; /* 모바일에서는 화살표 작게 */
@@ -1362,26 +1314,67 @@ body {
         padding: 1rem 1.5rem; /* 작은 모바일에서 패딩 더 줄이기 */
     }
     .brand-title {
-        font-size: 0.95rem; /* 작은 화면에서 3줄로 보이도록 더 작게 */
+        font-size: 0.95rem; /* 작은 화면에서 한 줄로 표시 */
         line-height: 1.15;
-        max-width: 75%; /* 너비 더 제한 */
+        white-space: nowrap; /* 줄바꿈 방지 */
+        overflow: hidden; /* 넘치는 텍스트 숨기기 */
+        text-overflow: ellipsis; /* 말줄임표 */
+        width: 100%; /* 전체 너비 사용 */
         margin: 0 auto 0.8rem auto; /* 중앙 정렬, 아래 마진 줄이기 */
+        text-shadow: 
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000,
+            0 0 5px rgba(0,0,0,0.8),
+            0 0 10px rgba(0,0,0,0.6); /* 작은 모바일용 외곽선과 그림자 */
     }
     .slide-content h2 {
-        font-size: 0.85rem; /* 부제목 더 작게 */
+        font-size: 0.8rem; /* 한 줄 표시용으로 조정 */
         line-height: 1.15;
+        white-space: nowrap; /* 줄바꿈 방지 */
+        overflow: hidden; /* 넘치는 텍스트 숨기기 */
+        text-overflow: ellipsis; /* 말줄임표 */
+        width: 100%; /* 전체 너비 사용 */
+        text-shadow: 
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000,
+            0 0 4px rgba(0,0,0,0.8),
+            0 0 8px rgba(0,0,0,0.6); /* 작은 모바일용 외곽선과 그림자 */
     }
     .slide-quote {
-        font-size: 0.7rem; /* 인용구 더 작게 */
+        font-size: 0.75rem; /* 한 줄 표시용으로 크기 조정 */
         line-height: 1.15;
-        max-width: 80%; /* 너비 더 제한 */
+        white-space: nowrap; /* 줄바꿈 방지 */
+        overflow: hidden; /* 넘치는 텍스트 숨기기 */
+        text-overflow: ellipsis; /* 말줄임표 */
+        width: 100%; /* 전체 너비 사용 */
         margin: 0 auto 0.8rem auto; /* 중앙 정렬, 아래 마진 줄이기 */
+        text-shadow: 
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000,
+            0 0 4px rgba(0,0,0,0.8),
+            0 0 8px rgba(0,0,0,0.6); /* 작은 모바일용 외곽선과 그림자 */
     }
     .slide-content p {
-        font-size: 0.65rem; /* 본문 더 작게 */
+        font-size: 0.7rem; /* 한 줄 표시용으로 크기 조정 */
         line-height: 1.15;
-        max-width: 85%; /* 너비 더 제한 */
+        white-space: nowrap; /* 줄바꿈 방지 */
+        overflow: hidden; /* 넘치는 텍스트 숨기기 */
+        text-overflow: ellipsis; /* 말줄임표 */
+        width: 100%; /* 전체 너비 사용 */
         margin: 0 auto 0.8rem auto; /* 중앙 정렬, 아래 마진 줄이기 */
+        text-shadow: 
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000,
+            0 0 3px rgba(0,0,0,0.8),
+            0 0 6px rgba(0,0,0,0.5); /* 작은 모바일용 외곽선과 그림자 */
     }
     .carousel-btn {
         font-size: 1rem; /* 화살표 더 작게 */
@@ -1533,3 +1526,363 @@ body {
         line-height: 1.3 !important;
     }
 } 
+
+/* 모모댕댕 소개 섹션 모바일 최적화 */
+@media (max-width: 768px) {
+    /* 모모댕댕 소개 섹션 전체 패딩 조정 */
+    .momodang-intro {
+        gap: 20px !important; /* 간격 줄이기 */
+        padding: 20px 15px !important; /* 패딩 줄이기 */
+    }
+    
+    /* 운영철학, 보호자 약속 컨테이너 */
+    .momodang-intro > div {
+        flex: 1 1 100% !important; /* 모바일에서 세로 배치 */
+        min-width: auto !important; /* 최소 너비 제거 */
+        margin-bottom: 20px;
+    }
+    
+    /* 제목 크기 조정 */
+    .momodang-intro h2 {
+        font-size: 20px !important; /* 제목 크기 줄이기 */
+        margin-bottom: 12px !important;
+    }
+    
+    /* 흰색 박스들 스타일 조정 */
+    .momodang-intro > div > div {
+        padding: 16px !important; /* 패딩 줄이기 */
+        margin-bottom: 16px !important; /* 마진 줄이기 */
+        border-radius: 8px !important; /* 둥근 모서리 줄이기 */
+    }
+    
+    /* 박스 내 제목 크기 조정 */
+    .momodang-intro h3 {
+        font-size: 16px !important; /* 박스 제목 크기 줄이기 */
+        line-height: 1.4 !important;
+        margin-bottom: 8px !important;
+    }
+    
+    /* 박스 내 본문 텍스트 조정 */
+    .momodang-intro p {
+        font-size: 14px !important; /* 본문 크기 줄이기 */
+        line-height: 1.5 !important;
+        margin-top: 8px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* 작은 모바일에서 더욱 컴팩트하게 */
+    .momodang-intro {
+        gap: 16px !important;
+        padding: 16px 12px !important; /* 패딩 더 줄이기 */
+    }
+    
+    /* 제목 더 작게 */
+    .momodang-intro h2 {
+        font-size: 18px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    /* 흰색 박스들 더 컴팩트하게 */
+    .momodang-intro > div > div {
+        padding: 14px !important; /* 패딩 더 줄이기 */
+        margin-bottom: 14px !important;
+    }
+    
+    /* 박스 내 제목 더 작게 */
+    .momodang-intro h3 {
+        font-size: 15px !important;
+        line-height: 1.3 !important;
+    }
+    
+    /* 박스 내 본문 더 작게 */
+    .momodang-intro p {
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+    }
+}
+
+/* 상담 안내 섹션 스타일 */
+.consultation-section {
+    padding: 80px 0 40px 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* 부드러운 그라데이션 배경 */
+}
+
+.consultation-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+/* 말풍선 아이콘 */
+.consultation-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.chat-bubble {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.bubble-content {
+    background: white;
+    border-radius: 16px;
+    padding: 12px 16px;
+    position: relative;
+}
+
+.bubble-content::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top-color: white;
+}
+
+.dots {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.dots span {
+    width: 8px;
+    height: 8px;
+    background: #667eea;
+    border-radius: 50%;
+    animation: typing 1.4s infinite ease-in-out;
+}
+
+.dots span:nth-child(1) { animation-delay: -0.32s; }
+.dots span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typing {
+    0%, 80%, 100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 메인 제목 */
+.consultation-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+/* 설명 텍스트 */
+.consultation-description {
+    margin-bottom: 40px;
+}
+
+.consultation-description p {
+    font-size: 16px;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* 버튼 컨테이너 */
+.consultation-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* 전화상담 버튼 (파란색) */
+.consultation-btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    min-width: 280px;
+}
+
+.consultation-btn.primary {
+    background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+    color: white;
+}
+
+.consultation-btn.primary:hover {
+    background: linear-gradient(135deg, #3182ce 0%, #2c5aa0 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(65, 153, 225, 0.4);
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .consultation-section {
+        padding: 60px 0 30px 0;
+    }
+    
+    .consultation-container {
+        margin: 0 15px;
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+    
+    .chat-bubble {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .consultation-title {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+    
+    .consultation-description {
+        margin-bottom: 30px;
+    }
+    
+    .consultation-description p {
+        font-size: 15px;
+    }
+    
+    .consultation-btn {
+        padding: 14px 24px;
+        font-size: 15px;
+        min-width: 260px;
+    }
+}
+
+@media (max-width: 480px) {
+    .consultation-container {
+        margin: 0 10px;
+        padding: 25px 15px;
+        border-radius: 16px;
+    }
+    
+    .chat-bubble {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .consultation-title {
+        font-size: 20px;
+        margin-bottom: 14px;
+    }
+    
+    .consultation-description {
+        margin-bottom: 25px;
+    }
+    
+    .consultation-description p {
+        font-size: 14px;
+    }
+    
+    .consultation-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+        min-width: 240px;
+    }
+}
+
+/* 모모댕댕 브랜드 히스토리 섹션 스타일 */
+.brand-history {
+    padding: 80px 0; /* 위아래 여백 */
+    background: #f8f9fa; /* 연한 회색 배경 */
+}
+
+/* 왼쪽 이미지 스타일 */
+.history-image {
+    flex: 1; /* 공간의 절반 차지 */
+}
+.history-image img {
+    width: 100%; /* 이미지 너비 꽉 차게 */
+    height: auto; /* 높이는 자동 */
+    border-radius: 12px; /* 둥근 모서리 */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* 그림자 효과 */
+}
+
+/* 오른쪽 콘텐츠 스타일 */
+.history-content {
+    flex: 1; /* 공간의 절반 차지 */
+}
+
+/* 히스토리 제목 스타일 */
+.history-title {
+    font-size: 24px; /* 제목 24px */
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px; /* 아래 여백 줄임 */
+}
+
+/* 스토리 텍스트 스타일 */
+.story-preview p,
+.story-full p {
+    font-size: 18px; /* 본문 18px */
+    line-height: 1.5; /* 줄 간격 1.5배 */
+    color: #444;
+    margin-bottom: 10px; /* 문단 간격 줄임 */
+    text-align: left; /* 좌측 정렬 */
+}
+
+/* 인용구 스타일 */
+.story-quote {
+    font-size: 18px !important; /* 인용문 18px */
+    font-weight: bold; /* 굵게 */
+    color: #ff6b35 !important; /* 주황색으로 강조 */
+    font-style: italic; /* 기울임체 */
+}
+
+/* 질문형 문장 스타일 */
+.story-question {
+    font-size: 18px !important; /* 질문 18px */
+    font-weight: bold; /* 굵게 */
+    color: #ff6b35 !important; /* 주황색으로 강조 (인용구와 동일) */
+}
+
+/* 서명 스타일 */
+.story-signature {
+    font-size: 20px !important; /* 마무리 문장 20px */
+    font-weight: bold;
+    color: #222 !important;
+    margin-top: 15px !important;
+    text-align: center !important; /* 가운데 정렬 */
+}
+
+/* 더보기/닫기 버튼 스타일 */
+.story-toggle-btn {
+    background: #222; /* 검은색 바탕 */
+    color: #fff; /* 흰색 글자 */
+    border: none; /* 테두리 없음 */
+    padding: 12px 24px; /* 여백 */
+    font-size: 1rem;
+    border-radius: 25px; /* 둥근 모서리 */
+    cursor: pointer; /* 마우스 포인터 */
+    margin-top: 15px; /* 위 여백 줄임 */
+    transition: all 0.3s ease; /* 부드러운 변화 */
+}
+.story-toggle-btn:hover {
+    background: #444; /* 마우스 올렸을 때 살짝 밝게 */
+    transform: translateY(-2px); /* 살짝 위로 올라가게 */
+}
