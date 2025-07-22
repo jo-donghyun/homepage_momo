@@ -74,7 +74,7 @@ const observer = new IntersectionObserver(function(entries) {
 
 // 페이지 로드 시 애니메이션 대상 요소들 설정
 window.addEventListener('load', function() {
-    const animateElements = document.querySelectorAll('.section-title, .feature, .program-card, .review-card');
+    const animateElements = document.querySelectorAll('.section-title, .feature, .promise-card, .program-card, .review-card');
     
     animateElements.forEach(el => {
         el.style.opacity = '0';

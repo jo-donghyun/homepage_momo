@@ -172,7 +172,7 @@ p  {
     justify-content: center;
     text-align: center;
     background: 
-        linear-gradient(135deg, rgba(250, 248, 245, 0.9) 0%, rgba(254, 253, 251, 0.85) 50%, rgba(255, 248, 242, 0.9) 100%),
+        linear-gradient(135deg, rgba(250, 248, 245, 0.5) 0%, rgba(254, 253, 251, 0.4) 50%, rgba(255, 248, 242, 0.5) 100%),
         url('image/hero01.png') center/cover no-repeat;
     position: relative;
     overflow: hidden;
@@ -185,7 +185,7 @@ p  {
     right: -20%;
     width: 40%;
     height: 200%;
-    background: radial-gradient(ellipse, rgba(244, 165, 116, 0.1) 0%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(244, 165, 116, 0.05) 0%, transparent 70%);
     transform: rotate(-15deg);
 }
 
@@ -203,6 +203,7 @@ p  {
     margin-bottom: 28px;
     line-height: 1.1;
     letter-spacing: -0.02em;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8), 0 1px 3px rgba(45, 42, 38, 0.2);
 }
 
 .hero-subheadline {
@@ -211,6 +212,7 @@ p  {
     color: var(--accent-orange);
     margin-bottom: 36px;
     line-height: 1.3;
+    text-shadow: 0 2px 6px rgba(255, 255, 255, 0.7), 0 1px 2px rgba(230, 126, 69, 0.3);
 }
 
 .hero-description {
@@ -221,6 +223,7 @@ p  {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(107, 93, 82, 0.2);
 }
 
 .cta-button {
@@ -236,6 +239,7 @@ p  {
     text-decoration: none;
     display: inline-block;
     box-shadow: 0 8px 24px rgba(230, 126, 69, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button:hover {
@@ -270,35 +274,35 @@ p  {
 
 .feature {
     text-align: center;
-    padding: 40px 30px;
+    padding: 50px 35px;
     background: #fff;
     border-radius: 24px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
     transition: all 0.4s ease;
-    border: 1px solid rgba(244, 165, 116, 0.1);
+    border: 1px solid rgba(244, 165, 116, 0.12);
 }
 
 .feature:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 32px rgba(230, 126, 69, 0.15);
-    border-color: rgba(244, 165, 116, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 16px 40px rgba(230, 126, 69, 0.18);
+    border-color: rgba(244, 165, 116, 0.25);
 }
 
 .feature-image {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 28px auto;
-    border-radius: 20px;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 30px auto;
+    border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 8px 24px rgba(230, 126, 69, 0.15);
-    border: 3px solid rgba(244, 165, 116, 0.2);
+    box-shadow: 0 10px 28px rgba(230, 126, 69, 0.18);
+    border: 3px solid rgba(244, 165, 116, 0.25);
     transition: all 0.3s ease;
 }
 
 .feature-image:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(230, 126, 69, 0.25);
-    border-color: rgba(244, 165, 116, 0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(230, 126, 69, 0.28);
+    border-color: rgba(244, 165, 116, 0.45);
 }
 
 .feature-image img {
@@ -309,7 +313,7 @@ p  {
 }
 
 .feature:hover .feature-image img {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 .feature h3 {
@@ -324,6 +328,114 @@ p  {
     font-size: 16px;
     color: var(--secondary-text);
     line-height: 1.5;
+}
+
+/* Promise Section - 보호자와의 3가지 약속 */
+.promise-section {
+    margin-top: 80px;
+    padding: 80px 0;
+    background: var(--cream-bg);
+    border-radius: 24px;
+    position: relative;
+}
+
+.promise-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+.promise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.promise-card {
+    text-align: center;
+    padding: 50px 35px;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 6px 24px rgba(230, 126, 69, 0.08);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(244, 165, 116, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.promise-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-orange), var(--soft-orange));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.promise-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 40px rgba(230, 126, 69, 0.15);
+    border-color: rgba(244, 165, 116, 0.3);
+}
+
+.promise-card:hover::before {
+    transform: scaleX(1);
+}
+
+.promise-image {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 35px auto;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(230, 126, 69, 0.12);
+    border: 2px solid rgba(244, 165, 116, 0.15);
+    transition: all 0.3s ease;
+}
+
+.promise-image:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(230, 126, 69, 0.2);
+    border-color: rgba(244, 165, 116, 0.3);
+}
+
+.promise-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.promise-card:hover .promise-image img {
+    transform: scale(1.08);
+}
+
+.promise-card h3 {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--primary-text);
+    margin-bottom: 24px;
+    line-height: 1.3;
+}
+
+.promise-card p {
+    font-size: 16px;
+    color: var(--secondary-text);
+    line-height: 1.6;
+    text-align: left;
+}
+
+.promise-card p strong {
+    color: var(--accent-orange);
+    font-weight: 600;
 }
 
 /* Philosophy Section */
@@ -879,14 +991,24 @@ p  {
     .section-title { font-size: 40px; }
     
     .feature-grid { grid-template-columns: 1fr; gap: 40px; }
+    .promise-grid { grid-template-columns: 1fr; gap: 35px; }
     .program-grid { grid-template-columns: 1fr; gap: 40px; }
     .review-grid { grid-template-columns: 1fr; gap: 32px; }
     .history-container { grid-template-columns: 1fr; gap: 40px; }
     .philosophy-container { grid-template-columns: 1fr; gap: 40px; }
     
     .feature-image {
-        width: 100px;
-        height: 100px;
+        width: 140px;
+        height: 140px;
+    }
+    
+    .promise-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .promise-card {
+        padding: 40px 30px;
     }
 }
 
@@ -906,8 +1028,8 @@ p  {
     .footer-top { grid-template-columns: 1fr; gap: 32px; }
     
     .feature-image {
-        width: 90px;
-        height: 90px;
+        width: 120px;
+        height: 120px;
     }
     
     .review-photo {
@@ -918,6 +1040,24 @@ p  {
     .stats-section {
         padding: 60px 20px;
         margin-top: 60px;
+    }
+    
+    .promise-section {
+        padding: 60px 0;
+        margin-top: 60px;
+    }
+    
+    .promise-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .promise-card {
+        padding: 35px 25px;
+    }
+    
+    .promise-card h3 {
+        font-size: 20px;
     }
 }
 
@@ -934,6 +1074,28 @@ p  {
     
     .program-content { padding: 24px; }
     .review-card { padding: 24px; }
+    
+    .promise-card {
+        padding: 30px 20px;
+    }
+    
+    .promise-image {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .promise-card h3 {
+        font-size: 18px;
+    }
+    
+    .promise-card p {
+        font-size: 15px;
+    }
+    
+    .feature-image {
+        width: 100px;
+        height: 100px;
+    }
     
     /* 브랜드 스토리 반응형 */
     .story-quote {
