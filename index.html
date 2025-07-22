@@ -3,598 +3,350 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>모두모여댕댕</title>
-    <!-- 넥슨 폰트 웹폰트 적용 -->
-    <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2107@1.1/NEXON_Lv1_Gothic.css" rel="stylesheet" type="text/css" />
-    <!-- Noto Sans KR 폰트 적용 -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <title>모모댕댕 - 반려견 교육의 새로운 기준</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- 헤더 시작 -->
+    <!-- 헤더 -->
     <header class="main-header">
-        <!-- 상단: 로고+브랜드명(좌측) + 상담하기(우측) -->
-        <div class="header-top">
+        <div class="header-content">
             <div class="brand-container">
-                <!-- 왼쪽: 로고 이미지 -->
-                <img src="image/logo1.jpg" alt="로고" class="logo">
-                <!-- 로고 옆 브랜드 이름 -->
-                <span class="brand-name">반려견 유치원, 모모댕댕</span>
+                <img src="image/logo1.jpg" alt="모모댕댕 로고" class="logo">
+                <span class="brand-name">모모댕댕</span>
             </div>
-            <!-- 오른쪽: 상담하기 버튼 -->
-            <button class="consult-btn">📞 상담하기</button>
+            <nav class="main-nav">
+                <a href="#intro">소개</a>
+                <a href="#philosophy">철학</a>
+                <a href="#program">프로그램</a>
+                <a href="#review">후기</a>
+                <a href="#contact">문의</a>
+            </nav>
+            <button class="consult-btn">상담하기</button>
         </div>
-        <!-- 하단: 가운데 메뉴들 -->
-        <nav class="main-nav">
-            <a href="#intro">모모댕댕 소개</a>
-            <a href="#philosophy">교육철학</a>
-            <a href="#program">프로그램</a>
-            <a href="#review">보호자후기</a>
-            <a href="#contact">문의하기</a>
-        </nav>
     </header>
-    <!-- 헤더 끝 -->
 
-    <!-- 히어로 캐러셀 시작 -->
-    <section class="hero-carousel">
-        <!-- 슬라이드 1 -->
-        <div class="slide active" style="background-image: url('image/hero01.png');">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-                <h1 class="brand-title">반려견 유치원, 모모댕댕</h1>
-                <h2>"질서는 배워지는 습관입니다."</h2>
-                <p class="slide-quote">생활기반 행동교육으로 하루하루 달라지는 아이들!</p>
-            </div>
-        </div>
-        
-        <!-- 슬라이드 2 -->
-        <div class="slide" style="background-image: url('image/hero02.jpg');">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-                <h1 class="brand-title">반려견 유치원, 모모댕댕</h1>
-                <h2>"건강한 하루는 걷는 것부터 시작해요."</h2>
-                <p>하루 세 번 테라스 산책으로 몸도 마음도 튼튼하게</p>
-            </div>
-        </div>
-        
-        <!-- 슬라이드 3 -->
-        <div class="slide" style="background-image: url('image/hero03.jpg');">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-                <h1 class="brand-title">반려견 유치원, 모모댕댕</h1>
-                <h2>"놀이 속에서 사회성을 배웁니다."</h2>
-                <p>친구들과 함께 자라는 아이들의 유치원</p>
-            </div>
-        </div>
-        
-        <!-- 슬라이드 4 -->
-        <div class="slide" style="background-image: url('image/hero04.jpg');">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-                <h1 class="brand-title">반려견 유치원, 모모댕댕</h1>
-                <h2>"보호자의 믿음을 바탕으로 운영됩니다."</h2>
-                <p>전문가와 함께하는 우리 아이 성장 여정</p>
-            </div>
-        </div>
-        
-        <!-- 좌우 화살표 버튼 -->
-        <button class="carousel-btn prev-btn">&lt;</button>
-        <button class="carousel-btn next-btn">&gt;</button>
-    </section>
-    <!-- 히어로 캐러셀 끝 -->
-
-    <!-- 모모댕댕 소개 섹션 시작 -->
-    <section class="intro-section" id="intro">
-        <div class="intro-container">
-            <!-- 상단: 제목 -->
-            <h2 class="intro-title">🐾 모모댕댕은 어떤 곳인가요?</h2>
-            
-            <!-- 상단: 이미지들 가로 배치 -->
-            <div class="intro-images-horizontal">
-                <div class="image-item">
-                    <img src="image/guide01.jpg" alt="모모댕댕 소개 이미지 1">
-                </div>
-                <div class="image-item">
-                    <img src="image/guide02.jpg" alt="모모댕댕 소개 이미지 2">
-                </div>
-            </div>
-            
-            <!-- 새로운 스타일의 모모댕댕 소개 -->
-            <section class="momodang-intro" style="display: flex; flex-wrap: wrap; gap: 40px; padding: 40px; font-family: sans-serif; background: #f9f9f9;">
-              
-              <!-- 운영 철학 -->
-              <div style="flex: 1; min-width: 300px;">
-                <h2 style="font-size: 24px; color: #FF6B57; margin-bottom: 16px;">🧭 모모댕댕의 운영 철학</h2>
-
-                <div style="background: white; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 0 10px #eee;">
-                  <h3 style="font-size: 18px;">🐾 생활 속에서 자연스럽게 배우는 교육</h3>
-                  <p style="margin-top: 10px; color: #555;">줄 서기, 문 통과하기, 기다림, 칸에 들어가기. 훈련이 아닌 일상 속에서 예절을 익히는 교육을 실천합니다.</p>
-                </div>
-
-                <div style="background: white; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 0 10px #eee;">
-                  <h3 style="font-size: 18px;">🧑‍🏫 전문가가 운영하는 안심 공간</h3>
-                  <p style="margin-top: 10px; color: #555;">공인 훈련사 자격, ISO 인증 등 신뢰 기반으로 운영합니다. 아이가 집중할 수 있는 안정된 환경을 제공합니다.</p>
-                </div>
-
-                <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #eee;">
-                  <h3 style="font-size: 18px;">👨‍👩‍👧 보호자와 함께하는 파트너</h3>
-                  <p style="margin-top: 10px; color: #555;">아이의 하루를 보호자와 함께 고민하고 나누며, 반려 생활을 함께 만들어가는 동반자가 됩니다.</p>
-                </div>
-              </div>
-
-              <!-- 고객 약속 -->
-              <div style="flex: 1; min-width: 300px;">
-                <h2 style="font-size: 24px; color: #4CAF50; margin-bottom: 16px;">🤝 보호자와의 약속</h2>
-
-                <div style="background: white; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 0 10px #eee;">
-                  <h3 style="font-size: 18px;">🌿 건강한 몸과 마음</h3>
-                  <p style="margin-top: 10px; color: #555;">매일 3회 산책, 마사지, 피트니스로 신체와 심리의 균형을 맞춥니다.</p>
-                </div>
-
-                <div style="background: white; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 0 10px #eee;">
-                  <h3 style="font-size: 18px;">🤗 사회성을 놀이로</h3>
-                  <p style="margin-top: 10px; color: #555;">친구들과 어울리며 배우는 인사, 양보, 기다림. 잘 노는 아이가 잘 크는 아이입니다.</p>
-                </div>
-
-                <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #eee;">
-                  <h3 style="font-size: 18px;">🎁 행복한 하루 선물</h3>
-                  <p style="margin-top: 10px; color: #555;">창밖 산책, 놀이, 간식이 가득한 일상. 아이가 유치원을 기다리는 이유입니다.</p>
-                </div>
-              </div>
-
-            </section>
-            
-            <!-- 하단: 새로운 스타일의 통계 섹션 -->
-            <section class="stats-section" style="padding: 40px; font-family: 'Pretendard', sans-serif; background: #fefefe;">
-              <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 30px; text-align: center; color: #333;">
-                🐾 사랑받아온 시간,<br>숫자로 말해요
-              </h2>
-
-              <div class="stats-container" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-
-                <div class="stats-card" style="flex: 1 1 200px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); padding: 24px; text-align: center; max-width: 280px;">
-                  <img src="https://cdn-icons-png.flaticon.com/512/3448/3448447.png" alt="Trophy Icon" style="width: 50px; height: 50px; margin-bottom: 10px;"/>
-                  <div style="font-size: 36px; color: #ff6b6b; font-weight: bold;">3년 연속</div>
-                  <div style="margin-top: 8px; font-size: 16px; color: #555;">정원 마감</div>
-                  <p style="margin-top: 10px; font-size: 14px; color: #777;">아이들이 먼저 찾는 유치원,<br>3년째 정원 마감 중입니다.</p>
-                </div>
-
-                <div class="stats-card" style="flex: 1 1 200px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); padding: 24px; text-align: center; max-width: 280px;">
-                  <img src="https://cdn-icons-png.flaticon.com/512/4208/4208313.png" alt="Heart Icon" style="width: 50px; height: 50px; margin-bottom: 10px;"/>
-                  <div style="font-size: 36px; color: #4caf50; font-weight: bold;">5.0 / 5.0</div>
-                  <div style="margin-top: 8px; font-size: 16px; color: #555;">보호자 만족도</div>
-                  <p style="margin-top: 10px; font-size: 14px; color: #777;">매년 조사, 매년 만점.<br>보호자의 진심이 만든 기록입니다.</p>
-                </div>
-
-                <div class="stats-card" style="flex: 1 1 200px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); padding: 24px; text-align: center; max-width: 280px;">
-                  <img src="https://cdn-icons-png.flaticon.com/512/4315/4315445.png" alt="Repeat Icon" style="width: 50px; height: 50px; margin-bottom: 10px;"/>
-                  <div style="font-size: 36px; color: #2196f3; font-weight: bold;">99%+</div>
-                  <div style="margin-top: 8px; font-size: 16px; color: #555;">재등록률</div>
-                  <p style="margin-top: 10px; font-size: 14px; color: #777;">한 번 경험하면<br>다시 찾는 이유가 분명합니다.</p>
-                </div>
-
-                <div class="stats-card" style="flex: 1 1 200px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); padding: 24px; text-align: center; max-width: 280px;">
-                  <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Clock Icon" style="width: 50px; height: 50px; margin-bottom: 10px;"/>
-                  <div style="font-size: 36px; color: #ff9800; font-weight: bold;">80%+</div>
-                  <div style="margin-top: 8px; font-size: 16px; color: #555;">1년 이상 원아 비율</div>
-                  <p style="margin-top: 10px; font-size: 14px; color: #777;">오래 다니는 친구가 많다는 건<br>그만큼 신뢰받고 있다는 뜻입니다.</p>
-                </div>
-
-              </div>
-            </section>
+    <!-- 히어로 섹션 -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-headline">질서는<br>배워지는 습관입니다</h1>
+            <p class="hero-subheadline">생활기반 행동교육으로 하루하루 달라지는 아이들</p>
+            <p class="hero-description">반려견과의 진정한 소통은 강요가 아닌 이해에서 시작됩니다.<br>모모댕댕에서 여러분의 특별한 가족과 함께 성장하세요.</p>
+            <a href="#contact" class="cta-button">상담 시작하기</a>
         </div>
     </section>
-    <!-- 모모댕댕 소개 섹션 끝 -->
 
-    <!-- 교육철학 섹션 시작 -->
-    <section class="philosophy-section" id="philosophy">
-        <div class="philosophy-container">
-            <!-- 교육철학 제목 -->
-            <h2 class="philosophy-title">모모댕댕의 교육철학</h2>
-            <p class="philosophy-quote">"교육은 삶 속에서 시작됩니다."</p>
+    <!-- 소개 섹션 -->
+    <section class="intro-section section" id="intro">
+        <div class="container">
+            <h2 class="section-title">세 가지 약속</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-image">
+                        <img src="image/hero02.jpg" alt="생활 속 자연스러운 교육">
+                    </div>
+                    <h3>생활 속 자연스러운 교육</h3>
+                    <p>줄 서기, 문 통과하기, 기다림. 일상 속에서 예절을 익히는 교육을 실천합니다.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-image">
+                        <img src="image/hero04.jpg" alt="전문가가 운영하는 신뢰">
+                    </div>
+                    <h3>전문가가 운영하는 신뢰</h3>
+                    <p>공인 훈련사 자격과 ISO 인증을 바탕으로 안정된 환경을 제공합니다.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-image">
+                        <img src="image/class.jpg" alt="보호자와 함께하는 여정">
+                    </div>
+                    <h3>보호자와 함께하는 여정</h3>
+                    <p>아이의 하루를 함께 고민하며 반려 생활을 만들어가는 동반자입니다.</p>
+                </div>
+            </div>
             
-            <!-- 핵심 설명 문단 -->
-            <div class="philosophy-content">
-                <p>모모댕댕은 교육이 '유치원'에서만 이루어지는 것이 아니라,</p>
-                <p class="highlight-text">'강아지의 생활 전체가 곧 교육의 장'이 되어야 한다고 믿습니다.</p>
-                
-                <p>줄 서서 문을 통과하는 습관,<br>
-                각자의 켄넬에 조용히 들어가는 행동,<br>
-                친구들과 자연스럽게 어울리는 사회성까지.</p>
-                
-                <p>이 모든 것은 단지 가르친다고 되는 것이 아닙니다.<br>
-                <span class="highlight-text">'일상 속에서 반복하고 체득되도록 설계된 환경'</span>이 있을 때,<br>
-                강아지는 스트레스 없이 배웁니다.</p>
-                
-                <p>우리는 이런 교육을 <span class="highlight-text">'생활기반 행동교육'</span>이라 부릅니다.</p>
+            <!-- 신뢰도 통계 섹션 -->
+            <div class="stats-section">
+                <h3>믿음직한 숫자들</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">3년 연속</div>
+                        <div class="stat-label">정원 마감</div>
+                        <p>아이들이 먼저 찾는 유치원</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5.0 / 5.0</div>
+                        <div class="stat-label">보호자 만족도</div>
+                        <p>매년 조사, 매년 만점</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">99%+</div>
+                        <div class="stat-label">재등록률</div>
+                        <p>한 번 경험하면 다시 찾는 이유</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">80%+</div>
+                        <div class="stat-label">1년 이상 원아</div>
+                        <p>오래 다니는 친구가 많은 이유</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <!-- 교육철학 섹션 끝 -->
 
-    <!-- 프로그램 섹션 시작 -->
-    <section class="program-section" id="program">
-        <div class="program-container">
-            <!-- 상단 로고 이미지 -->
-            <div class="program-logo">
-                <img src="image/logo1.jpg" alt="모모댕댕 로고">
+    <!-- 교육철학 섹션 -->
+    <section class="philosophy-section section" id="philosophy">
+        <div class="container">
+            <h2 class="section-title">교육철학</h2>
+            <p class="philosophy-quote">"교육은 삶 속에서 시작됩니다"</p>
+            <div class="philosophy-container">
+                <div class="philosophy-content">
+                    <p>모모댕댕은 교육이 '유치원'에서만 이루어지는 것이 아니라, 강아지의 생활 전체가 곧 교육의 장이 되어야 한다고 믿습니다.</p>
+                    <p>일상 속에서 반복하고 체득되도록 설계된 환경이 있을 때, 강아지는 스트레스 없이 배웁니다.</p>
+                    <p>우리는 이런 교육을 '생활기반 행동교육'이라 부릅니다.</p>
+                </div>
+                <div class="philosophy-image">
+                    <img src="image/hero02.jpg" alt="생활기반 행동교육">
+                </div>
             </div>
-            
-            <!-- 프로그램 제목 -->
-            <h1 class="product-title">모모댕댕 프로그램</h1>
-            
-            <!-- 프로그램 그리드 (2x2 배치) -->
+        </div>
+    </section>
+
+    <!-- 프로그램 섹션 -->
+    <section class="program-section section" id="program">
+        <div class="container">
+            <h2 class="section-title">프로그램</h2>
             <div class="program-grid">
-                <!-- 프로그램 1: 모모댕댕 반려견 유치원 -->
-                <div class="program-item">
+                <div class="program-card">
                     <div class="program-image">
-                        <img src="image/product1.jpg" alt="모모댕댕 반려견 유치원">
+                        <img src="image/product1.jpg" alt="반려견 유치원">
                     </div>
                     <div class="program-content">
-                        <h3>모모댕댕 반려견 유치원</h3>
-                        <div class="program-description">
-                            <p class="preview-text">"매일이 성장의 순간이 되는 곳"</p>
-                            <p class="preview-text">모모댕댕 유치원은 단순한 돌봄이 아닌,</p>
-                            <p class="preview-text">하루하루의 경험 속에서 배우는 교육의 공간입니다.</p>
-                            
-                            <div class="full-text" style="display: none;">
-                                <p>차분히 대기하기, 시선 맞추기, 다른 강아지와 편안하게 있기 등</p>
-                                <p>이 모든 것은 강요가 아닌 놀이처럼 자연스럽게 이루어집니다.</p>
-                                <p>반려견 전문가가 아이의 기질에 맞춘 맞춤형 커리큘럼을 구성합니다.</p>
-                                <p>산책, 놀이, 관찰, 휴식이 균형 있게 어우러진 루틴은</p>
-                                <p>아이에게 안정감을 주고, 보호자에게는 신뢰를 드립니다.</p>
-                                <p>아이들이 스스로 유치원을 기다리는 이유, 바로 여기 있습니다.</p>
-                                <p><strong>운영 주기:</strong> 월~금 주 5회 (주3일, 4일, 5일반 운영)</p>
-                                <p><strong>운영 시간:</strong> 07:00~19:50</p>
-                                <p><strong>특이사항:</strong> 등·하원 픽업 서비스 별도 제공, 반려견 상세 리포트 발송</p>
-                            </div>
-                            
-                            <button class="more-btn">더보기</button>
-                        </div>
+                        <h3>반려견 유치원</h3>
+                        <p>매일이 성장의 순간이 되는 곳</p>
+                        <p>차분히 대기하기, 시선 맞추기, 다른 강아지와 편안하게 있기 등 이 모든 것은 강요가 아닌 놀이처럼 자연스럽게 이루어집니다.</p>
+                        <p><strong>운영:</strong> 월~금 주 5회 (07:00~19:50)</p>
+                        <p><strong>서비스:</strong> 등·하원 픽업 서비스, 상세 리포트 발송</p>
                     </div>
                 </div>
-                
-                <!-- 프로그램 2: 모모댕댕 호텔 -->
-                <div class="program-item">
+
+                <div class="program-card">
                     <div class="program-image">
                         <img src="image/product2.jpg" alt="모모댕댕 호텔">
                     </div>
                     <div class="program-content">
                         <h3>모모댕댕 호텔</h3>
-                        <div class="program-description">
-                            <p class="preview-text">"하룻밤도 익숙한 품에서"</p>
-                            <p class="preview-text">모모댕댕 호텔은 낯선 공간이 아닌,</p>
-                            <p class="preview-text">아이에게 익숙한 사람과 공간에서 머물 수 있는 '두 번째 집'입니다.</p>
-                            
-                            <div class="full-text" style="display: none;">
-                                <p>유치원 친구들만 이용 가능한 전용 서비스로,</p>
-                                <p>아이의 성향과 습관을 잘 아는 반려견 전문가가 24시간 함께합니다.</p>
-                                <p>객실은 모두 프라이빗 독립 공간이며,</p>
-                                <p>하루 루틴은 유치원과 동일하게 유지되어 안정감을 줍니다.</p>
-                                <p>밤에는 아이의 하루를 정성스레 담은 저녁 리포트가 보호자에게 전달됩니다.</p>
-                                <p>이 공간은 돌봄 그 이상, 휴식과 회복을 위한 특별한 호텔입니다.</p>
-                                <p><strong>운영 시간:</strong> 24시간 기준 / 1박 단위</p>
-                                <p><strong>이용 대상:</strong> 모모댕댕 유치원 이용 중인 원아 전용</p>
-                                <p><strong>포함 서비스:</strong> 1:1 전담 돌봄, 산책·식사·놀이 제공, CCTV 모니터링, 저녁 리포트 전송</p>
-                            </div>
-                            
-                            <button class="more-btn">더보기</button>
-                        </div>
+                        <p>하룻밤도 익숙한 품에서</p>
+                        <p>아이의 성향과 습관을 잘 아는 반려견 전문가가 24시간 함께합니다. 객실은 모두 프라이빗 독립 공간이며, 하루 루틴은 유치원과 동일하게 유지됩니다.</p>
+                        <p><strong>대상:</strong> 유치원 이용 중인 원아 전용</p>
+                        <p><strong>포함:</strong> 1:1 전담 돌봄, CCTV 모니터링, 저녁 리포트</p>
                     </div>
                 </div>
-                
-                <!-- 프로그램 3: 모모댕댕 독 피트니스 -->
-                <div class="program-item">
+
+                <div class="program-card">
                     <div class="program-image">
-                        <img src="image/product3.jpg" alt="모모댕댕 독 피트니스">
+                        <img src="image/product3.jpg" alt="독 피트니스">
                     </div>
                     <div class="program-content">
-                        <h3>모모댕댕 독 피트니스</h3>
-                        <div class="program-description">
-                            <p class="preview-text">"건강도, 성격도, 움직임에서 시작됩니다"</p>
-                            <p class="preview-text">모모댕댕 피트니스는 단순한 활동이 아니라</p>
-                            <p class="preview-text">아이의 몸과 마음을 동시에 관리하는 건강 습관 수업입니다.</p>
-                            
-                            <div class="full-text" style="display: none;">
-                                <p>짐볼, 밸런스패드, 어질리티 등 다양한 운동 기구를 사용하여</p>
-                                <p>각 아이의 상태에 맞춘 1:1 맞춤 피트니스가 진행됩니다.</p>
-                                <p>비만, 노령, 재활, 퍼피 등 다양한 상황에 적용 가능하며</p>
-                                <p>체력 관리, 행동 안정, 스트레스 완화에 탁월한 효과가 있습니다.</p>
-                                <p>내 아이에게 딱 맞는 운동 루틴을 찾고 싶다면,</p>
-                                <p>모모댕댕 피트니스에서 시작하세요.</p>
-                                <p><strong>운영 주기:</strong> 주 2회 / 총 4주</p>
-                                <p><strong>이용 대상:</strong> 모모댕댕 유치원 원아 전용</p>
-                                <p><strong>진행 방식:</strong> 1:1 전문 지도 방식</p>
-                            </div>
-                            
-                            <button class="more-btn">더보기</button>
-                        </div>
+                        <h3>독 피트니스</h3>
+                        <p>건강도, 성격도, 움직임에서 시작됩니다</p>
+                        <p>짐볼, 밸런스패드, 어질리티 등 다양한 운동 기구를 사용하여 각 아이의 상태에 맞춘 1:1 맞춤 피트니스가 진행됩니다. 비만, 노령, 재활, 퍼피 등 다양한 상황에 적용 가능합니다.</p>
+                        <p><strong>운영:</strong> 주 2회 / 총 4주 과정</p>
+                        <p><strong>방식:</strong> 1:1 전문 지도 (유치원 원아 전용)</p>
                     </div>
                 </div>
-                
-                <!-- 프로그램 4: 모모댕댕 보호자 클래스 -->
-                <div class="program-item">
+
+                <div class="program-card">
                     <div class="program-image">
-                        <img src="image/product4.jpg" alt="모모댕댕 보호자 클래스">
+                        <img src="image/product4.jpg" alt="보호자 클래스">
                     </div>
                     <div class="program-content">
-                        <h3>모모댕댕 보호자 클래스</h3>
-                        <div class="program-description">
-                            <p class="preview-text">"말이 통하는 가족이 되기 위한 첫걸음"</p>
-                            <p class="preview-text">반려견과의 삶이 더 편안해지길 원하시나요?</p>
-                            <p class="preview-text">그 시작은 보호자의 이해에서부터 출발합니다.</p>
-                            
-                            <div class="full-text" style="display: none;">
-                                <p>산책할 때 끌려 다니거나, 소리에 짖거나, 말이 통하지 않는 느낌</p>
-                                <p>이 모든 상황을 분석하고, 함께 훈련하며 실습하는 1:1 오프라인 클래스입니다.</p>
-                                <p>문제행동의 원인, 상황별 대처법, 감정 이해와 핸들링까지</p>
-                                <p>내 아이에게 꼭 맞는 솔루션을 직접 배워보세요.</p>
-                                <p>가족이 되는 길, 함께 배우면 더 가까워집니다.</p>
-                                <p><strong>운영 주기:</strong> 주 1회 / 총 2회</p>
-                                <p><strong>진행 방식:</strong> 1:1 오프라인 클래스</p>
-                                <p><strong>가격:</strong> 20만원 (유치원 원아는 할인 적용)</p>
-                            </div>
-                            
-                            <button class="more-btn">더보기</button>
-                        </div>
+                        <h3>보호자 클래스</h3>
+                        <p>말이 통하는 가족이 되기 위한 첫걸음</p>
+                        <p>산책할 때 끌려 다니거나, 소리에 짖거나, 말이 통하지 않는 느낌. 이 모든 상황을 분석하고 함께 훈련하며 실습하는 1:1 오프라인 클래스입니다.</p>
+                        <p><strong>운영:</strong> 주 1회 / 총 2회 과정</p>
+                        <p><strong>내용:</strong> 문제행동 원인 분석, 상황별 대처법, 감정 이해</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- 프로그램 섹션 끝 -->
 
-    <!-- 보호자 후기 섹션 시작 -->
-    <section class="review-section" id="review">
+    <!-- 보호자 후기 섹션 -->
+    <section class="review-section section" id="review">
         <div class="container">
-            <!-- 섹션 제목 -->
-            <h2 class="section-title">보호자 후기</h2>
-            
-            <!-- 후기 그리드 컨테이너 -->
+            <h2 class="section-title">보호자 이야기</h2>
             <div class="review-grid">
-                <!-- 후기 1 -->
                 <div class="review-card">
+                    <div class="review-photo">
+                        <img src="image/juduong.jpg" alt="주둥이">
+                    </div>
                     <div class="review-stars">★★★★★</div>
-                    <div class="review-author">주둥이 보호자, 진솔후기</div>
+                    <div class="review-author">주둥이 보호자</div>
                     <div class="review-content">
-                        <p>우리집 막둥이 주둥쓰는 원래 다니던 유치원 사정상, 다른 유치원으로 옮기게 되었는데 하나도 즐거워 보이지 않았어요. 우리 아이 사진보면 어떤 기분인지 알잖아요? 😢</p>
-                        <div class="review-more-content" style="display: none;">
-                            <p>그래서 모댕을 다니게 되었는데 집에서는 매우 멀지만 유치원에서 가르쳐주시는 교육들 집에서 따라하면서 조금씩 변하는 걸 보고 매우 훌륭한 유치원이라 자부하게 되었답니다.</p>
-                            <p>친구들하고 인사하는 법부터 산책시 어떻게 해야되는지 등등 많이 알려주세요. 🐕</p>
-                        </div>
-                        <button class="review-toggle-btn">더보기</button>
+                        <p>우리집 막둥이가 다른 유치원에서는 즐거워 보이지 않았는데, 모댕에서 가르쳐주시는 교육들로 조금씩 변하는 걸 보고 매우 훌륭한 유치원이라 생각하게 되었답니다.</p>
                     </div>
                 </div>
-                
-                <!-- 후기 2 -->
+
                 <div class="review-card">
+                    <div class="review-photo">
+                        <img src="image/ddunge.jpg" alt="뚱이">
+                    </div>
                     <div class="review-stars">★★★★★</div>
-                    <div class="review-author">뚱이 보호자, 진솔후기</div>
+                    <div class="review-author">뚱이 보호자</div>
                     <div class="review-content">
-                        <p>모댕에 등원한지 1년이 넘어가네요. 모댕에서 준비해주신 작고, 큰 이벤트로 매번 감탄, 감동받을 일 뿐입니다. 💕</p>
-                        <div class="review-more-content" style="display: none;">
-                            <p>모댕은 일회성 재미거리, 즐기고 끝내는 그런 내용이 아닌 유치원에서 열심히 공부한 교육 내용을 재밌는 놀이 형태로 풀어 접목시킨다는 점이 정말 높이 평가할 수 있는 점이라고 생각해요.</p>
-                            <p>더불어 소소한 혜택들까지! 감사합니다. 🙏</p>
-                        </div>
-                        <button class="review-toggle-btn">더보기</button>
+                        <p>모댕에 등원한지 1년이 넘어가네요. 일회성 재미거리가 아닌 교육 내용을 재밌는 놀이 형태로 풀어내는 점이 정말 높이 평가할 수 있어요.</p>
                     </div>
                 </div>
-                
-                <!-- 후기 3 -->
+
                 <div class="review-card">
+                    <div class="review-photo">
+                        <img src="image/nana.jpg" alt="나나">
+                    </div>
                     <div class="review-stars">★★★★★</div>
-                    <div class="review-author">나나 보호자, 진솔후기</div>
+                    <div class="review-author">나나 보호자</div>
                     <div class="review-content">
-                        <p>4년전 나나가 처음 모댕에 다닐 때에는 6kg로 비만이라 많이 힘들던 시절이었어요. 선생님들의 조언과 도움을 받아 다이어트를 시작했고, 현재는 3kg 유지중!! 💪</p>
-                        <div class="review-more-content" style="display: none;">
-                            <p>덕분에 잘 뛰고 잘 놀고, 잘 웃는 모습까지 보여 너무 건강한 견생을 살고 있답니다. 세상마상 감사하게도 이 모든 것들이 다~ 모모댕댕 선생님들의 가르침 덕분이 아닐까 생각합니다.</p>
-                            <p>스릉흡니다 슨생님덜 ❤️</p>
-                        </div>
-                        <button class="review-toggle-btn">더보기</button>
+                        <p>4년전 나나가 6kg 비만이었는데, 선생님들의 조언으로 현재 3kg 유지중! 잘 뛰고 잘 놀고, 건강한 견생을 살고 있답니다.</p>
                     </div>
                 </div>
-                
-                <!-- 후기 4 -->
+
                 <div class="review-card">
+                    <div class="review-photo">
+                        <img src="image/may.jpg" alt="오월이">
+                    </div>
                     <div class="review-stars">★★★★★</div>
-                    <div class="review-author">오월 보호자, 진솔후기</div>
+                    <div class="review-author">오월 보호자</div>
                     <div class="review-content">
-                        <p>작년부터 강아지 유치원 알아보다가 우연히 알게된 모모댕댕. 체계적인 느낌이 들어 상담 후 대기가 많아 기다리다가 겨우 들어왔어요. 🕐</p>
-                        <div class="review-more-content" style="display: none;">
-                            <p>첫 상담도 친절하게 해주시고, 모르는 부분들도 잘 알려주셨답니다. 두달만에 오월이 변하는 모습이 보이면서 신기하고 진작 보내줄 걸 얼마나 후회했는지 몰라요.</p>
-                            <p>그냥 강아지를 맡기는 곳이 아닌, 진짜 교육을 하는 유치원이라는 생각을 만들어주는 곳인 것 같습니다. ✨</p>
-                        </div>
-                        <button class="review-toggle-btn">더보기</button>
+                        <p>체계적인 느낌이 들어 상담 후 대기가 많았지만 겨우 들어왔어요. 두달만에 오월이 변하는 모습이 보이면서 진짜 교육을 하는 유치원이라는 생각을 만들어주는 곳입니다.</p>
                     </div>
                 </div>
-                
-                <!-- 후기 5 -->
+
                 <div class="review-card">
+                    <div class="review-photo">
+                        <img src="image/ddanggu.jpg" alt="땡구">
+                    </div>
                     <div class="review-stars">★★★★★</div>
-                    <div class="review-author">땡구 보호자, 진솔후기</div>
+                    <div class="review-author">땡구 보호자</div>
                     <div class="review-content">
-                        <p>초보 견주가 모모댕댕을 경험할 수 있는 건 아주 베리베리 행운이었어요! 꼼꼼한 커리큘럼을 바탕으로 전문성과 다정함, 디테일함을 가득 가지고 계신 선생님들을 만나 우리집 강아지는 매일 행복 속에 살고 있답니다. 🥰</p>
-                        <div class="review-more-content" style="display: none;">
-                            <p>피드백을 통해 견주로서 매일 성장도 하고 있구요. 늘 감사하고 모모댕댕 선생님들 쌍따봉이어요!</p>
-                            <p>동네사람들! 모모댕댕 오백번 다니셔요~ 👍👍</p>
-                        </div>
-                        <button class="review-toggle-btn">더보기</button>
+                        <p>초보 견주가 모모댕댕을 경험할 수 있는 건 아주 베리베리 행운이었어요! 전문성과 다정함, 디테일함을 가진 선생님들 덕분에 우리집 강아지는 매일 행복합니다.</p>
                     </div>
                 </div>
-                
-                <!-- 후기 6 -->
+
                 <div class="review-card">
+                    <div class="review-photo">
+                        <img src="image/ponge.jpg" alt="퐁퐁이">
+                    </div>
                     <div class="review-stars">★★★★★</div>
-                    <div class="review-author">퐁퐁이 보호자, 진솔후기</div>
+                    <div class="review-author">퐁퐁이 보호자</div>
                     <div class="review-content">
-                        <p>우리 퐁이가 모모댕댕 다닌지도 벌써 4년차가 다 되어갔네요. 퐁이 공중부양하는 사진이며 활짝 웃는 사진이며 예쁜 사진들 항상 보내주셔서 감사드리고, 여러 다양한 행사들이 있어서 너무 좋아요! 📸</p>
-                        <div class="review-more-content" style="display: none;">
-                            <p>우리 퐁이가 많이 의젓해지고 형님이 되어가는 것 같아요^^ 앞으로도 잘 부탁드립니다.</p>
-                            <p>모모댕댕 최고!! 🎉</p>
-                        </div>
-                        <button class="review-toggle-btn">더보기</button>
+                        <p>우리 퐁이가 모모댕댕 다닌지도 벌써 4년차네요. 예쁜 사진들 항상 보내주시고, 다양한 행사들이 있어서 너무 좋아요! 모모댕댕 최고!!</p>
                     </div>
                 </div>
-            </div>
-            
-            <!-- 후기모음 버튼 -->
-            <div class="review-more-link">
-                <a href="https://map.naver.com/p/entry/place/1642673304?placePath=/review?additionalHeight=76&entry=plt&from=map&fromPanelNum=1&locale=ko&svcName=map_pcv5&timestamp=202507151812&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202507151812&locale=ko&svcName=map_pcv5&searchType=place&lng=128.5475489&lat=35.9291244&c=15.00,0,0,0,dh" target="_blank" class="review-more-btn">후기모음 보기</a>
             </div>
         </div>
     </section>
-    <!-- 보호자 후기 섹션 끝 -->
 
-    <!-- 모모댕댕 브랜드 히스토리 섹션 시작 -->
-    <section class="brand-history">
+    <!-- 브랜드 히스토리 섹션 -->
+    <section class="brand-history section">
         <div class="container">
-            <!-- 왼쪽: 대표 이미지 -->
-            <div class="history-image">
-                <img src="image/contest1.jpg" alt="모모댕댕 대표 이미지">
-            </div>
-            
-            <!-- 오른쪽: 브랜드 스토리 -->
-            <div class="history-content">
-                <h2 class="history-title">👤 조동현 원장의 인사말</h2>
-                
-                <!-- 처음에 보이는 4줄 텍스트 -->
-                <div class="story-preview">
-                    <p class="story-quote">"믿고 보낼 곳이 없어, 직접 만들었습니다."</p>
-                    <p>모모댕댕의 시작은 한 명의 보호자로서 제 고민에서 출발했습니다.<br><br>
-                    대기업 LG화학에서 안정적인 커리어를 이어가던 중,<br>
-                    반려견을 케어하며 겪는 불편과 불안함, 그리고 정보의 부족을 절감했습니다.</p>
+            <div class="history-container">
+                <div class="history-image">
+                    <img src="image/contest1.jpg" alt="조동현 원장">
                 </div>
-                
-                <!-- 전체 스토리 (처음에는 숨겨져 있음) -->
-                <div class="story-full" style="display: none;">
+                <div class="history-content">
+                    <h2>조동현 원장의 약속</h2>
                     <p class="story-quote">"믿고 보낼 곳이 없어, 직접 만들었습니다."</p>
-                    <p>모모댕댕의 시작은 한 명의 보호자로서 제 고민에서 출발했습니다.<br><br>
-                    대기업 LG화학에서 안정적인 커리어를 이어가던 중,<br>
-                    반려견을 케어하며 겪는 불편과 불안함, 그리고 정보의 부족을 절감했습니다.<br><br>
-                    그래서 결심했습니다.</p>
                     
-                    <p class="story-quote">"내가 진심으로 보내고 싶은 유치원을 직접 만들자."</p>
-                    
-                    <p>그렇게 시작된 모모댕댕은<br>
-                    '생활기반 행동교육'을 중심으로<br>
-                    강아지가 생활 속에서 질서를 배우고,<br>
-                    보호자는 신뢰와 정보를 얻을 수 있는 공간으로 만들어졌습니다.</p>
-                    
-                    <p>포토존보다는 반려견의 삶을 바꾸는 교육을,<br>
-                    마케팅보다는 보호자에게 정확한 정보를 전달하는 것을 택했습니다.</p>
-                    
-                    <p>KKF 전국훈련경기 1등, 국가공인 훈련사 자격, ISO 9001 운영 인증...<br>
-                    이런 수치보다 더 자랑스러운 건,<br>
-                    1년 이상 함께해 주신 보호자 비율이 80%를 넘는다는 사실입니다.</p>
-                    
-                    <p>모모댕댕은 단순히 강아지를 맡기는 공간이 아니라,<br>
-                    강아지와 보호자 모두가 성장하는 파트너입니다.</p>
-                    
-                    <p class="story-question">혹시 지금,<br>
-                    우리 아이에게도 생활 속 변화가 필요하다고 느끼시나요?<br>
-                    끈끈한 유대를 가진 반려 관계를 원하시나요?<br><br>
-                    그렇다면 지금, 모모댕댕을 경험해 보세요.</p>
-                    
-                    <p class="story-signature">모모댕댕<br>대표 조동현</p>
-                </div>
-                
-                <!-- 더보기/닫기 버튼 -->
-                <button class="story-toggle-btn">더보기</button>
-            </div>
-        </div>
-    </section>
-    <!-- 모모댕댕 브랜드 히스토리 섹션 끝 -->
-
-    <!-- 상담 안내 섹션 시작 -->
-    <section class="consultation-section">
-        <div class="consultation-container">
-            <!-- 말풍선 아이콘 -->
-            <div class="consultation-icon">
-                <div class="chat-bubble">
-                    <div class="bubble-content">
-                        <div class="dots">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
+                    <!-- 기본 표시 내용 (3줄) -->
+                    <div class="story-preview">
+                        <p>모모댕댕의 시작은 한 명의 보호자로서 제 고민에서 출발했습니다.</p>
+                        <p>대기업 LG화학에서 안정적인 커리어를 이어가던 중, 반려견을 케어하며 겪는 불편과 불안함, 그리고 정보의 부족을 절감했습니다.</p>
+                        <p>그래서 결심했습니다. <strong>"내가 진심으로 보내고 싶은 유치원을 직접 만들자."</strong></p>
                     </div>
+                    
+                    <!-- 숨겨진 전체 내용 -->
+                    <div class="story-full" style="display: none;">
+                        <p>그렇게 시작된 모모댕댕은 <strong>'생활기반 행동교육'</strong>을 중심으로<br>
+                        강아지가 생활 속에서 질서를 배우고, 보호자는 신뢰와 정보를 얻을 수 있는 공간으로 만들어졌습니다.</p>
+                        
+                        <p>포토존보다는 <strong style="color: var(--accent-orange);">반려견의 삶을 바꾸는 교육을</strong>,<br>
+                        마케팅보다는 <strong style="color: var(--accent-orange);">보호자에게 정확한 정보를 전달하는 것</strong>을 택했습니다.</p>
+                        
+                        <p>KKF 전국훈련경기 1등, 국가공인 훈련사 자격, ISO 9001 운영 인증...<br>
+                        이런 수치보다 더 자랑스러운 건, <strong style="color: var(--accent-orange);">1년 이상 함께해 주신 보호자 비율이 80%를 넘는다는 사실</strong>입니다.</p>
+                        
+                        <p>모모댕댕은 단순히 강아지를 맡기는 공간이 아니라,<br>
+                        <strong>강아지와 보호자 모두가 성장하는 파트너</strong>입니다.</p>
+                        
+                        <div class="story-questions">
+                            <p><strong>혹시 지금, 우리 아이에게도 생활 속 변화가 필요하다고 느끼시나요?</strong></p>
+                            <p><strong>끈끈한 유대를 가진 반려 관계를 원하시나요?</strong></p>
+                            <p><strong>그렇다면 지금, 모모댕댕을 경험해 보세요.</strong></p>
+                        </div>
+                        
+
+                    </div>
+                    
+                    <!-- 더보기/닫기 버튼 -->
+                    <button class="story-toggle-btn" onclick="toggleStory()">
+                        <span class="toggle-text">더보기</span>
+                        <span class="toggle-icon">▼</span>
+                    </button>
+                    
+
                 </div>
-            </div>
-            
-            <!-- 메인 텍스트 -->
-            <h2 class="consultation-title">더 궁금한 점이 있으신가요?</h2>
-            
-            <!-- 설명 텍스트 -->
-            <div class="consultation-description">
-                <p>전화 상담을 통해 더 자세한 정보를 확인하실 수 있습니다.</p>
-                <p>친절한 모댕쌤이 언제든 도움을 드리겠습니다.</p>
-            </div>
-            
-            <!-- 상담 버튼 -->
-            <div class="consultation-buttons">
-                <a href="tel:010-5949-5250" class="consultation-btn primary">
-                    📞 전화 상담 (010-5949-5250)
-                </a>
             </div>
         </div>
     </section>
-    <!-- 상담 안내 섹션 끝 -->
 
-    <!-- 푸터 시작 -->
+    <!-- 상담 섹션 -->
+    <section class="consultation-section section" id="contact">
+        <div class="container">
+            <h2 class="consultation-title">시작할 준비가 되셨나요?</h2>
+            <div class="consultation-description">
+                <p>전문가와의 상담을 통해</p>
+                <p>여러분의 이야기를 들려주세요</p>
+            </div>
+            <a href="tel:010-5949-5250" class="consultation-btn primary">010-5949-5250</a>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
     <footer class="main-footer">
         <div class="footer-container">
-            <!-- 상단: 회사 정보와 SNS -->
             <div class="footer-top">
-                <!-- 좌측: 회사 정보 -->
                 <div class="footer-info">
-                    <div class="footer-links">
-                        <a href="#terms">이용약관</a>
-                        <span class="separator">|</span>
-                        <a href="#privacy">개인정보처리방침</a>
-                    </div>
-                    <div class="footer-contact">
-                        <p><strong>고객센터</strong> 010-5949-5250</p>
-                        <p><strong>운영시간</strong> 오전07시~ 오후 19시50분(주말, 공휴일 제외)</p>
-                        <p><strong>주소</strong> 대구광역시 북구 칠곡중앙대로373, 태원빌딩 4층</p>
-                    </div>
-                    <div class="footer-business">
-                        <p><strong>사업자등록번호</strong> 441-03-02189</p>
-                        <p><strong>업체명</strong> &lt;모두모여댕댕&gt; 반려견 교육 유치원</p>
-                        <p><strong>대표</strong> 조동현</p>
-                    </div>
+                    <p><strong>고객센터</strong> 010-5949-5250</p>
+                    <p><strong>운영시간</strong> 오전 07:00 ~ 오후 19:50 (주말, 공휴일 제외)</p>
+                    <p><strong>주소</strong> 대구광역시 북구 칠곡중앙대로373, 태원빌딩 4층</p>
+                    <p><strong>사업자등록번호</strong> 441-03-02189</p>
+                    <p><strong>대표</strong> 조동현</p>
                 </div>
-                
-                <!-- 우측: SNS 링크 -->
                 <div class="footer-social">
                     <h4>FOLLOW US</h4>
                     <div class="social-links">
                         <a href="https://instagram.com" target="_blank" class="social-link instagram">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                             </svg>
                         </a>
                         <a href="https://youtube.com" target="_blank" class="social-link youtube">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                             </svg>
                         </a>
                         <a href="https://blog.naver.com" target="_blank" class="social-link blog">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.5 17.5h-3v-11h3v11zm1.5 0h3v-6h-3v6zm3-8h-3v-3h3v3z"/>
                             </svg>
                         </a>
                     </div>
                 </div>
             </div>
-            
-            <!-- 하단: 저작권 -->
             <div class="footer-bottom">
-                <p>&copy; COPYRIGHT 모모댕댕. ALL RIGHTS RESERVED</p>
+                <p>&copy; 2024 모모댕댕. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <!-- 푸터 끝 -->
 
 </body>
 </html> 
